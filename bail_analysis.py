@@ -6,15 +6,15 @@ import math
 def plotBail(df):
     """
     nysid	
-    bond_info	- keep
+    bond_info	     - keep
     warrants
-    arrest_date - keep
-    next_court_date - keep
+    arrest_date      - keep
+    next_court_date  - keep
     housing_facility
     docket_numbers	
-    charges - keep
-    race - keep
-    gender - keep
+    charges          - keep
+    race             - keep
+    gender           - keep
     is_new	
     contains eligible charge
     """
@@ -51,26 +51,56 @@ def plotBail(df):
 
     # crime = 'CRIM POSS MARIJUANA'
     # crime = 'CRIM POS'
-    crime = 'MARIJUANA'
-    crime_list = []
+    # crime = 'MARIJUANA'
 
-    for idx in range(len(charges)):
-        if (crime in charges[idx]) and ('|' not in charges[idx]):
-            crime_list.append(idx)
+    # degree 7, 5, 4, 3, 2, 1
+    drug_sch_list = ['220.03', '220.06', '220.09', '220.16', '220.18', '220.21']
+    degree_list = ['7th', '5th', '4th', '3rd', '2nd', '1st']
+    bond_avg_list = []
+    bond_tot_list = []
+    counts_list = []
 
-    print('number of {} crimes is {}'.format(crime, len(crime_list)))
+    for crime in drug_sch_list:
+        # find indices in the DataFrame that match the charge code
+        crime_list = []
+        for idx in range(len(charges)):
+            if (crime in charges[idx]) and ('|' not in charges[idx]):
+                crime_list.append(idx)
 
-    bond_tot = 0
+        # collect total bond amount information by matchign indices
+        bond_tot = 0
+        for idx in crime_list:
+            print(charges[idx])
+            print(bonds[idx])
+            bond_tot += bonds[idx]
+        
+        bond_tot_list.append(bond_tot)
+        # handle division by zero if there are no crimes within list
+        if len(crime_list) != 0:
+            bond_avg = float(bond_tot) / float(len(crime_list))
+        else:
+            bond_avg = 0
+        print('The total bond amount is {} with an average of {} from {} charges'.format(bond_tot, bond_avg, len(crime_list)))
 
-    for idx in crime_list:
-        print(charges[idx])
-        bond_tot += bonds[idx]
-    
-    bond_avg = bond_tot / len(crime_list)
+        bond_avg_list.append(bond_avg)
+        counts_list.append(len(crime_list))
 
-    print('The total bond amount is {} with an average of {} from {} charges'.format(bond_tot, bond_avg, len(crime_list)))
+    drug_sch_list.append('220.03 & 220.06')
+    degree_list.append('7th & 5th')
+    bond_tot_list.append(bond_tot_list[0] + bond_tot_list[1])
+    counts_list.append(counts_list[0] + counts_list[1])
+    bond_avg_list.append((float(bond_tot_list[0]) + float(bond_tot_list[1])) / \
+        (float(counts_list[0]) + float(counts_list[1])))
 
 
+    df_res = pd.DataFrame({'statute':  drug_sch_list,
+                           'counts':   counts_list,
+                           'avg_bond': bond_avg_list,
+                           'degree':   degree_list,
+    })
+
+    print(df_res)
+    df_res.to_csv('data/nyc_drug_degree.csv ')
 
 def main():
     df = pd.read_csv('data/nyc_parsed.csv')
