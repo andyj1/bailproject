@@ -1,24 +1,53 @@
 from anytree import Node, RenderTree
 from anytree.exporter import DotExporter
+import pandas as pd
 
-nation   = Node("USA")
-LA       = Node("Louisianna", parent=nation)
-NY       = Node("New York", parent=nation)
+bjs = pd.read_csv('data/BJS Offense_Code_Crosswalk.csv')
+
+NATION   = Node("USA")
+LA       = Node("Louisianna", parent=NATION)
+NY       = Node("New York", parent=NATION)
+MI       = Node("Michigan", parent=NATION)
+AR       = Node("Arkansas", parent=NATION)
 
 EBR      = Node("East Baton Rogue", parent=LA)
 NYC      = Node("New York City", parent=NY)
+WAYNE    = Node("Wayne County", parent=MI)
+NW_AR    = Node("Northwest Arkansas", parent=AR)
 
-LA_1     = Node("EBR SCH 1", parent=EBR)
-LA_2     = Node("EBR SCH 2", parent=EBR)
-LA_3     = Node("EBR SCH 3", parent=EBR)
-LA_4     = Node("EBR SCH 4", parent=EBR)
-LA_5     = Node("EBR SCH 5", parent=EBR)
 
-NYC_1    = Node("NYC SCH 1", parent=NYC)
-NYC_2    = Node("NYC SCH 2", parent=NYC)
-NYC_3    = Node("NYC SCH 3", parent=NYC)
-NYC_4    = Node("NYC SCH 4", parent=NYC)
-NYC_5    = Node("NYC SCH 5", parent=NYC)
+CRIME    = Node("Crime")
+VIO      = Node("Violent", parent=CRIME)
+PROP     = Node("Property", parent=CRIME)
+DRUG     = Node("Drug", parent=CRIME)
+
+D_TRAFF  = Node("Drug\nTrafficking", parent=DRUG)
+D_POSS   = Node("Drug\nPosssession/Use", parent=DRUG)
+D_OTH    = Node("Drug\nOther", parent=DRUG)
+
+# WEAP_OFF  = Node("Weapons\nOffense")  
+# MURDER    = Node("Murder")
+# HOMICIDE  = Node("Unspecified\nHomicide")
+# MANSLA_NN = Node("Non-negligent\nManslaughter")
+# MANSLA_N  = Node("Negligent Manslaughter")
+# KIDNAP    = Node("Kidnapping")
+# SEX_ASS   = Node("Sexual Assault")
+# ROBBERY   = Node("Robbery")
+# ASSAULT   = Node("Assault")
+# OTH_VIO   = Node("Other\nViolent")
+# OTH_VIO   = Node("Other\nViolent")
+# STO_PROP  = 
+# TRES_PROP = Node()
+# DRUG_POS  = Node("Drug\nPossession", parent=CRIME)
+# DRUG_TRAF = 
+# OTHER     = 
+
+SCH_1    = Node("SCH I", parent=D_POSS)
+SCH_2    = Node("SCH II", parent=D_POSS)
+SCH_3    = Node("SCH III", parent=D_POSS)
+SCH_4    = Node("SCH IV", parent=D_POSS)
+SCH_5    = Node("SCH V", parent=D_POSS)
 
 # graphviz needs to be installed for the next line!
-DotExporter(nation).to_picture("plots/tree.png")
+DotExporter(NATION).to_picture("plots/loc_tree.png")
+DotExporter(CRIME).to_picture("plots/crime_tree.png")
