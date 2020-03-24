@@ -27,7 +27,7 @@
 
 #### Ontology
 - Each state charge description (statute) is classified (manually and/or automatically) into the BJS code and BJS Broad Category, which contains five different groups (shown below)
-> Viloent, Drug, Property, Public Order, Other
+> Violent, Drug, Property, Public Order, Other
 - Plots: frequency of each BJS broad category for each state, particularly for those with bail bonds < \$5,000 because The Bail Project focuses on and assists with groups with such amounts.
 
 #### Constraints
