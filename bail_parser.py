@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-def parse_df(df):
+def parse_nyc_df(df):
     """
     Parses through df to remove nan and non-numeric bail amounts
 
@@ -79,11 +79,40 @@ def parse_df(df):
     # save out data to new csv
     df.to_csv('data/nyc_parsed.csv')
 
+def parse_la_df(df):
+    """
+    Parses through df to remove nan and non-numeric bail amounts
 
-def main():
+    Keep only the following columns:
+
+    Scrape_Date
+    State
+    County
+    Facility_Name
+    State_Code
+    Jail_ID
+    Name
+    Sex
+    Race
+    Booking_Date
+    Release_Date
+    Status
+    Bond_Amount
+    Bond_Date
+    Charge
+    Court
+    File_Number
+    Statute
+    """
+
+
+def main_nyc():
     df = pd.read_csv("data/2_4 data NYC.csv")
-    parse_df(df)
+    parse_nyc_df(df)
 
+def main_la():
+    df = pd.read_csv("data/LA_East_Baton_Rouge_Charges.csv")
+    parse_la_df(df)
 
 if __name__ == "__main__":
-    main()
+    main_nyc()

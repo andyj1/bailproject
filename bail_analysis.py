@@ -3,8 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-def plotBail(df):
+def find_drug_degree(df):
     """
+    Returns avgerage bail bond amount 
+
     nysid	
     bond_info	     - keep
     warrants
@@ -102,9 +104,42 @@ def plotBail(df):
     print(df_res)
     df_res.to_csv('data/nyc_drug_degree.csv ')
 
-def main():
+def find_dollar_bail(df):
+    # print(df.head())
+    print('df shape initially is', df.shape)
+
+    # charges = df['charges'].values
+    # bonds = df['bond_info'].values
+    # low_bond_idx_list = []
+    # for idx in range(len(bonds)):
+    #     if bonds[idx] < 10.:
+    #         low_bond_idx_list.append(idx)
+    # print(low_bond_idx_list)
+
+    df2 = df.loc[df['bond_info'] < 10.]
+    print(df2.head())
+    print('df shape after is', df2.shape)
+
+    # bonds = df2['bond_info'].values
+
+    # df3 = df2.loc[df['charges'].isin(['Felony'])]
+    # print(df3.head())
+
+    felony_count = df2['charges'].str.contains('Felony').sum()
+    if felony_count > 0:
+        print('There are {} Felony counts'.format(felony_count))
+
+    misdemeanor_count = df2['charges'].str.contains('Misdemeanor').sum()
+    if misdemeanor_count > 0:
+        print('There are {} Misdemeanor counts'.format(misdemeanor_count))
+
+def main_nyc():
     df = pd.read_csv('data/nyc_parsed.csv')
-    plotBail(df)
+    # find_drug_degree(df)
+    find_dollar_bail(df)
+
+def main_la():
+    df = pd.read_csv('data/la_parsed')
 
 if __name__ == "__main__":
-    main()
+    main_nyc()
