@@ -813,11 +813,11 @@ circle1.attr({ fill: "yellow" });
 var t1 = rsr.text(300, 300, "The Bail Project HQ");
 
 // Arkansas
-var circle2 = rsr.circle(830, 370, 50);
+var circle2 = rsr.circle(830, 370, 40);
 circle2.attr({ gradient: "80-#FFF-#80df20" });
 var t2 = rsr.text(830, 370, "Arkansas");
 circle2.mouseover(function(e) {
-  this.node.style.opacity = 0.3;
+  this.node.style.opacity = 0.1;
   document.getElementById("state-name").innerHTML = "Arkansas";
 });
 circle2.mouseout(function(e) {
@@ -825,11 +825,11 @@ circle2.mouseout(function(e) {
 });
 
 // Louisiana
-var circle3 = rsr.circle(830, 470, 50);
+var circle3 = rsr.circle(830, 470, 40);
 circle3.attr({ gradient: "80-#FFF-#80df20" });
 var t3 = rsr.text(830, 470, "Louisiana");
 circle3.mouseover(function(e) {
-  this.node.style.opacity = 0.3;
+  this.node.style.opacity = 0.1;
   document.getElementById("state-name").innerHTML = "Louisiana";
 });
 circle3.mouseout(function(e) {
@@ -841,7 +841,7 @@ var circle4 = rsr.circle(1100, 170, 20);
 circle4.attr({ gradient: "80-#FFF-#80df20" });
 var t4 = rsr.text(1100, 170, "New York");
 circle4.mouseover(function(e) {
-  this.node.style.opacity = 0.3;
+  this.node.style.opacity = 0.1;
   document.getElementById("state-name").innerHTML = "New York";
 });
 circle4.mouseout(function(e) {
@@ -853,7 +853,7 @@ var circle5 = rsr.circle(950, 180, 40);
 circle5.attr({ gradient: "80-#FFF-#80df20" });
 var t5 = rsr.text(950, 180, "Michigan");
 circle5.mouseover(function(e) {
-  this.node.style.opacity = 0.3;
+  this.node.style.opacity = 0.1;
   document.getElementById("state-name").innerHTML = "Michigan";
 });
 circle5.mouseout(function(e) {
