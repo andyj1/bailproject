@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>One single section - fullPage.js</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage One single section." />
+    <meta name="keywords" content="fullpage,One, Single, Section" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <style>
+      /* Style for our header texts
+	* --------------------------------------- */
+      h1 {
+        font-size: 5em;
+        font-family: arial, helvetica;
+        color: #fff;
+        margin: 0;
+        padding: 40px 0 0 0;
+      }
+      .intro p {
+        color: #fff;
+        padding: 40px 0 0 0;
+      }
+      .wrap {
+        margin-left: auto;
+        margin-right: auto;
+        width: 980px;
+        position: relative;
+        padding: 20px 0 20px 0;
+      }
+      .wrap h1 {
+        font-size: 2.3em;
+        color: #333;
+        padding: 30px 0 10px 0;
+      }
+      .wrap p {
+        font-size: 16px;
+        padding: 0 0 10px 0;
+      }
+      .box {
+        display: block;
+        background: #f2f2f2;
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      /* Centered texts in each section
+	* --------------------------------------- */
+      .section {
+        text-align: center;
+      }
+
+      /* Bottom menu
+	* --------------------------------------- */
+      #infoMenu li a {
+        color: #000;
+      }
+      .maps {
+        margin: auto;
+        /* border: 1px solid green; */
+        padding: 10px;
+        /* margin-left: -28%;
+        margin-right: 10%; */
+      }
+    </style>
+
+    <!--[if IE]>
+      <script type="text/javascript">
+        var console = { log: function() {} };
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header" style="padding-left:20px; background-color: beige">
+        <div>
+          <h1>
+            <a href="https://bailproject.org/"
+              ><img src="img/thebailproject_logo.png" alt="TBP Logo"
+            /></a>
+          </h1>
+          <!-- <div> -->
+          <a> ECE491 Data Science For Social Good (Sp 2020)</a>
+          <br />
+          <a>
+            Andy Jeong, Minyoung Na, Stella Blue Ponzulogo, Justin Rooney (+Zoe
+            Bowhay)</a
+          >
+          <!-- </div> -->
+        </div>
+      </header>
+      <ul id="menu">
+        <li data-menuanchor="firstPage">
+          <a href="#header">Home</a>
+        </li>
+        <li data-menuanchor="secondPage">
+          <a href="#demographics">Who?</a>
+        </li>
+        <li data-menuanchor="3rdPage">
+          <a href="#timejail">How long?</a>
+        </li>
+        <li data-menuanchor="4thPage">
+          <a href="#insights">Insights</a>
+        </li>
+        <li data-menuanchor="5thPage">
+          <a href="#ontology">Ontology</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="maps">
+      <h3>
+        <b
+          >The data we received from The Bail Project comes from four different
+          states: (best in full screen)</b
+        >
+      </h3>
+      <div id="map" class="united-states">
+        <h3 id="state-name"></h3>
+      </div>
+    </div>
+    <!-- Raphaël JS Map Here -->
+
+    <script src="js/raphael-min.js"></script>
+    <script src="js/usasvg.js"></script>
+
+    <div id="fullpage">
+      <div class="section" id="firstinfographic">
+          <div class="intro" id="timejail">
+            <h1>Time in Jail</h1>
+            <div style="overflow-x:visible">
+              <script src="js/lazyloadimg.js"></script>
+              <img src="https://ik.imagekit.io/demo/img/image1.jpeg?tr=w-400,h-300" style="
+                  background: #F1F1FA;
+                  width: 400px;
+                  height: 300px;
+                  display: block;
+                  margin: 10px auto;
+                  border: 0;"/>
+              <img src="https://ik.imagekit.io/demo/img/image2.jpeg?tr=w-400,h-300" style="
+                  background: #F1F1FA;
+                  width: 400px;
+                  height: 300px;
+                  display: block;
+                  margin: 10px auto;
+                  border: 0;"/>
+              <img src="https://ik.imagekit.io/demo/img/image3.jpg?tr=w-400,h-300" style="
+                  background: #F1F1FA;
+                  width: 400px;
+                  height: 300px;
+                  display: block;
+                  margin: 10px auto;
+                  border: 0;"/>
+            </div>
+          </div>
+        </div>  
+      <div class="section " id="section0" style="overflow-x: visible">
+        <div class="intro" id="demographics">
+          <h1>Demographics</h1>
+          <br />
+          <h5>Arkansas</h5>
+          <div
+            id="selectSort"
+            ,
+            class="image1"
+            ,
+            style="height:500px; margin-top:-250px; margin-left:27%;"
+          >
+            >
+          </div>
+          <h5>Louisiana</h5>
+          <div
+            id="selectSort2"
+            ,
+            class="image2"
+            style="height:500px; margin-top:-250px; margin-left:30%;"
+          ></div>
+          <h5>New York</h5>
+          <div
+            id="selectSort3"
+            ,
+            class="image3"
+            style="height:500px; margin-top:-250px; margin-left:30%;"
+          ></div>
+
+          <script src="js/arcjs.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+          <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        </div>
+      </div>
+      <div class="section">
+        <div class="intro" id="timejail">
+          <h1>Time in Jail</h1>
+          <p>
+            graph
+          </p>
+        </div>
+      </div>
+      <div class="section" id="insights">
+        <div class="slide" id="slide1" style="overflow-x: visible">
+          <div class="intro">
+            <h1>Insights</h1>
+            <h5 style="color:white">
+              what is being used as a placeholder in these states?
+            </h5>
+            <p style="text-align: left">
+              Dollar Bail (New York)
+            </p>
+            <p style="text-align: left">
+              Zero Bail (New York)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="ontology">
+        <div class="intro">
+          <h1>Ontology</h1>
+          <p>
+            Drugs
+          </p>
+          <p>
+            Murder
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <h1>Additional info here</h1>
+    </div>
+
+    <script type="text/javascript" src="js/fullpage.js"></script>
+    <script type="text/javascript" src="examples.js"></script>
+
+    <script type="text/javascript">
+      var myFullpage = new fullpage("#fullpage", {
+        anchors: ["firstPage", "secondPage", "3rdPage", "4thPage", "5thPage"],
+        sectionsColor: ["#dfdfdf", "#3B6EB1", "#333333", "#a3e3e3", "#4A6FB1"],
+        autoScrolling: false,
+        css3: true,
+        fitToSection: false
+      });
+    </script>
+
+    <!-- arc diagram scripts -->
+    <script>
+      var i,
+        width = 1000, //960,
+        height = 500,
+        transitionTime = 1000,
+        spacing = 50,
+        margin = 50,
+        // offsets in rotation
+        offsetx = -30,
+        offsety = 30,
+        nodeY = 400,
+        nodes = arkansas.nodes,
+        links = arkansas.links,
+        colors = d3.scale.category20(),
+        τ = 2 * Math.PI; // http://tauday.com/tau-manifesto
+
+      var svg = d3
+        .select("div.image1")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("align", "center");
+
+      function mapRange(value, inMin, inMax, outMin, outMax) {
+        var inVal = Math.min(Math.max(value, inMin), inMax);
+        return outMin + (outMax - outMin) * ((inVal - inMin) / (inMax - inMin));
+      }
+
+      // Set each node's value to the sum of all incoming and outgoing link values
+      var nodeValMin = 100000000,
+        nodeValMax = 0;
+      for (i = 0; i < nodes.length; i++) {
+        nodes[i].value = 0;
+        nodes[i].displayOrder = i;
+      }
+      for (i = 0; i < links.length; i++) {
+        var link = links[i];
+        value = link.value;
+        nodes[link.source].value += link.value;
+        nodes[link.target].value += link.value;
+      }
+      for (i = 0; i < nodes.length; i++) {
+        nodeValMin = Math.min(nodeValMin, nodes[i].value);
+        nodeValMax = Math.max(nodeValMax, nodes[i].value);
+      }
+
+      var arcBuilder = d3.svg
+        .arc()
+        .startAngle(-τ / 4)
+        .endAngle(τ / 4);
+      arcBuilder.setRadii = function(d) {
+        var arcHeight = 0.5 * Math.abs(d.x2 - d.x1);
+        this.innerRadius(arcHeight - d.thickness / 2).outerRadius(
+          arcHeight + d.thickness / 2
+        );
+      };
+      function arcTranslation(d) {
+        return "translate(" + (d.x1 + d.x2) / 2 + "," + nodeY + ")";
+      }
+      function nodeDisplayX(node) {
+        return node.displayOrder * spacing + margin;
+      }
+
+      var path;
+
+      function update() {
+        // DATA JOIN
+        path = svg.selectAll("path").data(links)
+        .attr("stroke", d => d.source.group === d.target.group ? color(d.source.group) : "#aaa");
+        // UPDATE
+        path
+          .transition()
+          .duration(transitionTime)
+          .call(pathTween, null);
+        // ENTER
+        path
+          .enter()
+          .append("path")          
+          .attr("transform", function(d, i) {
+            d.x1 = nodeDisplayX(nodes[d.target]);
+            d.x2 = nodeDisplayX(nodes[d.source]);
+            return arcTranslation(d);
+          })
+          .attr("d", function(d, i) {
+            d.thickness = 1 + d.value;
+            arcBuilder.setRadii(d);
+            return arcBuilder();
+          });
+
+        // DATA JOIN
+        var circle = svg.selectAll("circle").data(nodes);
+        // UPDATE
+        circle
+          .transition()
+          .duration(transitionTime)
+          .attr("cx", function(d, i) {
+            return nodeDisplayX(d);
+          });
+        // ENTER
+        circle
+          .enter()
+          .append("circle")
+          .attr("cy", nodeY)
+          .attr("cx", function(d, i) {
+            return nodeDisplayX(d);
+          })
+          .attr("r", function(d, i) {
+            return mapRange(d.value, nodeValMin, nodeValMax, 2.5, 13);
+          })
+          .attr("fill", function(d, i) {
+            return colors(d.group + 10);
+          })
+          .attr("stroke", function(d, i) {
+            return d3.rgb(colors(d.group + 5)).darker(10);
+          });
+
+        function textTransform(node) {
+          return (
+            "rotate(-20 " +
+            (nodeDisplayX(node) - offsetx + 20) +
+            " " +
+            (nodeY + offsety) +
+            ")"
+          );
+        }
+        // DATA JOIN
+        var text = svg.selectAll("text").data(nodes);
+        // UPDATE
+        text
+          .transition()
+          .duration(transitionTime)
+          .attr("x", function(d, i) {
+            return nodeDisplayX(d) - 5;
+          })
+          .attr("transform", function(d, i) {
+            return textTransform(d);
+          });
+        // ENTER
+        text
+          .enter()
+          .append("text")
+          .attr("y", nodeY + 12)
+          .attr("x", function(d, i) {
+            return nodeDisplayX(d) - 5;
+          })
+          .attr("transform", function(d, i) {
+            return textTransform(d);
+          })
+          .attr("font-size", "10px")
+          .text(function(d, i) {
+            return d.nodeName;
+          });
+      }
+
+      doSort(0);
+      update();
+
+      function pathTween(transition, dummy) {
+        transition.attrTween("d", function(d) {
+          var interpolateX1 = d3.interpolate(
+            d.x1,
+            nodeDisplayX(nodes[d.target])
+          );
+          var interpolateX2 = d3.interpolate(
+            d.x2,
+            nodeDisplayX(nodes[d.source])
+          );
+          return function(t) {
+            d.x1 = interpolateX1(t);
+            d.x2 = interpolateX2(t);
+            arcBuilder.setRadii(d + 5);
+            return arcBuilder();
+          };
+        });
+
+        transition.attrTween("transform", function(d) {
+          var interpolateX1 = d3.interpolate(
+            d.x1,
+            nodeDisplayX(nodes[d.target])
+          );
+          var interpolateX2 = d3.interpolate(
+            d.x2,
+            nodeDisplayX(nodes[d.source])
+          );
+          return function(t) {
+            d.x1 = interpolateX1(t);
+            d.x2 = interpolateX2(t);
+            return arcTranslation(d);
+          };
+        });
+      }
+
+      d3.select("#selectSort").on("change", function() {
+        doSort(this.selectedIndex);
+        update();
+      });
+
+      function doSort(sortMethod) {
+        var nodeMap = [],
+          sortFunciton;
+
+        for (i = 0; i < nodes.length; i++) {
+          var node = $.extend({ index: i }, nodes[i]); // Shallow copy
+          nodeMap.push(node);
+        }
+
+        if (sortMethod == 0) {
+          // GROUP
+          sortFunction = function(a, b) {
+            return b.group - a.group;
+          };
+        } else if (sortMethod == 1) {
+          // FREQUENCY
+          sortFunction = function(a, b) {
+            return b.value - a.value;
+          };
+        } else if (sortMethod == 2) {
+          // ALPHABETICAL
+          sortFunction = function(a, b) {
+            return a.nodeName.localeCompare(b.nodeName);
+          };
+        }
+
+        nodeMap.sort(sortFunction);
+        for (i = 0; i < nodeMap.length; i++) {
+          nodes[nodeMap[i].index].displayOrder = i;
+        }
+      }
+    </script>
+
+    <!-- Louisiana -->
+
+    <script>
+      var i,
+        width = 1000, //960,
+        height = 500,
+        transitionTime = 1000,
+        spacing = 50,
+        margin = 50,
+        // offsets in rotation
+        offsetx = -30,
+        offsety = 30,
+        nodeY = 400,
+        nodes = louisiana.nodes,
+        links = louisiana.links,
+        colors = d3.scale.category20(),
+        τ = 2 * Math.PI; // http://tauday.com/tau-manifesto
+
+      var svg = d3
+        .select("div.image2")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("align", "center");
+
+      function mapRange(value, inMin, inMax, outMin, outMax) {
+        var inVal = Math.min(Math.max(value, inMin), inMax);
+        return outMin + (outMax - outMin) * ((inVal - inMin) / (inMax - inMin));
+      }
+
+      // Set each node's value to the sum of all incoming and outgoing link values
+      var nodeValMin = 100000000,
+        nodeValMax = 0;
+      for (i = 0; i < nodes.length; i++) {
+        nodes[i].value = 0;
+        nodes[i].displayOrder = i;
+      }
+      for (i = 0; i < links.length; i++) {
+        var link = links[i];
+        value = link.value;
+        nodes[link.source].value += link.value;
+        nodes[link.target].value += link.value;
+      }
+      for (i = 0; i < nodes.length; i++) {
+        nodeValMin = Math.min(nodeValMin, nodes[i].value);
+        nodeValMax = Math.max(nodeValMax, nodes[i].value);
+      }
+
+      var arcBuilder = d3.svg
+        .arc()
+        .startAngle(-τ / 4)
+        .endAngle(τ / 4);
+      arcBuilder.setRadii = function(d) {
+        var arcHeight = 0.5 * Math.abs(d.x2 - d.x1);
+        this.innerRadius(arcHeight - d.thickness / 2).outerRadius(
+          arcHeight + d.thickness / 2
+        );
+      };
+      function arcTranslation(d) {
+        return "translate(" + (d.x1 + d.x2) / 2 + "," + nodeY + ")";
+      }
+      function nodeDisplayX(node) {
+        return node.displayOrder * spacing + margin;
+      }
+
+      var path;
+
+      function update2() {
+        // DATA JOIN
+        path = svg.selectAll("path").data(links);
+        // update2
+        path
+          .transition()
+          .duration(transitionTime)
+          .call(pathTween, null);
+        // ENTER
+        path
+          .enter()
+          .append("path")
+          .attr("transform", function(d, i) {
+            d.x1 = nodeDisplayX(nodes[d.target]);
+            d.x2 = nodeDisplayX(nodes[d.source]);
+            return arcTranslation(d);
+          })
+          .attr("d", function(d, i) {
+            d.thickness = 1 + d.value;
+            arcBuilder.setRadii(d);
+            return arcBuilder();
+          });
+
+        // DATA JOIN
+        var circle = svg.selectAll("circle").data(nodes);
+        // update2
+        circle
+          .transition()
+          .duration(transitionTime)
+          .attr("cx", function(d, i) {
+            return nodeDisplayX(d);
+          });
+        // ENTER
+        circle
+          .enter()
+          .append("circle")
+          .attr("cy", nodeY)
+          .attr("cx", function(d, i) {
+            return nodeDisplayX(d);
+          })
+          .attr("r", function(d, i) {
+            return mapRange(d.value, nodeValMin, nodeValMax, 2.5, 13);
+          })
+          .attr("fill", function(d, i) {
+            return colors(d.group);
+          })
+          .attr("stroke", function(d, i) {
+            return d3.rgb(colors(d.group)).darker(1);
+          });
+
+        function textTransform(node) {
+          return (
+            "rotate(-45 " +
+            (nodeDisplayX(node) - offsetx) +
+            " " +
+            (nodeY + offsety) +
+            ")"
+          );
+        }
+        // DATA JOIN
+        var text = svg.selectAll("text").data(nodes);
+        // update2
+        text
+          .transition()
+          .duration(transitionTime)
+          .attr("x", function(d, i) {
+            return nodeDisplayX(d) - 5;
+          })
+          .attr("transform", function(d, i) {
+            return textTransform(d);
+          });
+        // ENTER
+        text
+          .enter()
+          .append("text")
+          .attr("y", nodeY + 12)
+          .attr("x", function(d, i) {
+            return nodeDisplayX(d) - 5;
+          })
+          .attr("transform", function(d, i) {
+            return textTransform(d);
+          })
+          .attr("font-size", "10px")
+          .text(function(d, i) {
+            return d.nodeName;
+          });
+      }
+
+      doSort(0);
+      update2();
+
+      function pathTween(transition, dummy) {
+        transition.attrTween("d", function(d) {
+          var interpolateX1 = d3.interpolate(
+            d.x1,
+            nodeDisplayX(nodes[d.target])
+          );
+          var interpolateX2 = d3.interpolate(
+            d.x2,
+            nodeDisplayX(nodes[d.source])
+          );
+          return function(t) {
+            d.x1 = interpolateX1(t);
+            d.x2 = interpolateX2(t);
+            arcBuilder.setRadii(d);
+            return arcBuilder();
+          };
+        });
+
+        transition.attrTween("transform", function(d) {
+          var interpolateX1 = d3.interpolate(
+            d.x1,
+            nodeDisplayX(nodes[d.target])
+          );
+          var interpolateX2 = d3.interpolate(
+            d.x2,
+            nodeDisplayX(nodes[d.source])
+          );
+          return function(t) {
+            d.x1 = interpolateX1(t);
+            d.x2 = interpolateX2(t);
+            return arcTranslation(d);
+          };
+        });
+      }
+
+      d3.select("#selectSort2").on("change", function() {
+        doSort(this.selectedIndex);
+        update2();
+      });
+
+      function doSort(sortMethod) {
+        var nodeMap = [],
+          sortFunciton;
+
+        for (i = 0; i < nodes.length; i++) {
+          var node = $.extend({ index: i }, nodes[i]); // Shallow copy
+          nodeMap.push(node);
+        }
+
+        if (sortMethod == 0) {
+          // GROUP
+          sortFunction = function(a, b) {
+            return b.group - a.group;
+          };
+        } else if (sortMethod == 1) {
+          // FREQUENCY
+          sortFunction = function(a, b) {
+            return b.value - a.value;
+          };
+        } else if (sortMethod == 2) {
+          // ALPHABETICAL
+          sortFunction = function(a, b) {
+            return a.nodeName.localeCompare(b.nodeName);
+          };
+        }
+
+        nodeMap.sort(sortFunction);
+        for (i = 0; i < nodeMap.length; i++) {
+          nodes[nodeMap[i].index].displayOrder = i;
+        }
+      }
+    </script>
+
+    <!-- New York -->
+
+    <script>
+      var i,
+        width = 1000, //960,
+        height = 500,
+        transitionTime = 1000,
+        spacing = 50,
+        margin = 50,
+        // offsets in rotation
+        offsetx = -30,
+        offsety = 30,
+        nodeY = 400,
+        nodes = newyork.nodes,
+        links = newyork.links,
+        colors = d3.scale.category20(),
+        τ = 2 * Math.PI; // http://tauday.com/tau-manifesto
+
+      var svg = d3
+        .select("div.image3")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("align", "center");
+
+      function mapRange(value, inMin, inMax, outMin, outMax) {
+        var inVal = Math.min(Math.max(value, inMin), inMax);
+        return outMin + (outMax - outMin) * ((inVal - inMin) / (inMax - inMin));
+      }
+
+      // Set each node's value to the sum of all incoming and outgoing link values
+      var nodeValMin = 100000000,
+        nodeValMax = 0;
+      for (i = 0; i < nodes.length; i++) {
+        nodes[i].value = 0;
+        nodes[i].displayOrder = i;
+      }
+      for (i = 0; i < links.length; i++) {
+        var link = links[i];
+        value = link.value;
+        nodes[link.source].value += link.value;
+        nodes[link.target].value += link.value;
+      }
+      for (i = 0; i < nodes.length; i++) {
+        nodeValMin = Math.min(nodeValMin, nodes[i].value);
+        nodeValMax = Math.max(nodeValMax, nodes[i].value);
+      }
+
+      var arcBuilder = d3.svg
+        .arc()
+        .startAngle(-τ / 4)
+        .endAngle(τ / 4);
+      arcBuilder.setRadii = function(d) {
+        var arcHeight = 0.5 * Math.abs(d.x2 - d.x1);
+        this.innerRadius(arcHeight - d.thickness / 2).outerRadius(
+          arcHeight + d.thickness / 2
+        );
+      };
+      function arcTranslation(d) {
+        return "translate(" + (d.x1 + d.x2) / 2 + "," + nodeY + ")";
+      }
+      function nodeDisplayX(node) {
+        return node.displayOrder * spacing + margin;
+      }
+
+      var path;
+
+      function update3() {
+        // DATA JOIN
+        path = svg.selectAll("path").data(links);
+        // update3
+        path
+          .transition()
+          .duration(transitionTime)
+          .call(pathTween, null);
+        // ENTER
+        path
+          .enter()
+          .append("path")
+          .attr("transform", function(d, i) {
+            d.x1 = nodeDisplayX(nodes[d.target]);
+            d.x2 = nodeDisplayX(nodes[d.source]);
+            return arcTranslation(d);
+          })
+          .attr("d", function(d, i) {
+            d.thickness = 1 + d.value;
+            arcBuilder.setRadii(d);
+            return arcBuilder();
+          });
+
+        // DATA JOIN
+        var circle = svg.selectAll("circle").data(nodes);
+        // update3
+        circle
+          .transition()
+          .duration(transitionTime)
+          .attr("cx", function(d, i) {
+            return nodeDisplayX(d);
+          });
+        // ENTER
+        circle
+          .enter()
+          .append("circle")
+          .attr("cy", nodeY)
+          .attr("cx", function(d, i) {
+            return nodeDisplayX(d);
+          })
+          .attr("r", function(d, i) {
+            return mapRange(d.value, nodeValMin, nodeValMax, 2.5, 13);
+          })
+          .attr("fill", function(d, i) {
+            return colors(d.group);
+          })
+          .attr("stroke", function(d, i) {
+            return d3.rgb(colors(d.group)).darker(1);
+          });
+
+        function textTransform(node) {
+          return (
+            "rotate(-45 " +
+            (nodeDisplayX(node) - offsetx) +
+            " " +
+            (nodeY + offsety) +
+            ")"
+          );
+        }
+        // DATA JOIN
+        var text = svg.selectAll("text").data(nodes);
+        // update3
+        text
+          .transition()
+          .duration(transitionTime)
+          .attr("x", function(d, i) {
+            return nodeDisplayX(d) - 5;
+          })
+          .attr("transform", function(d, i) {
+            return textTransform(d);
+          });
+        // ENTER
+        text
+          .enter()
+          .append("text")
+          .attr("y", nodeY + 12)
+          .attr("x", function(d, i) {
+            return nodeDisplayX(d) - 5;
+          })
+          .attr("transform", function(d, i) {
+            return textTransform(d);
+          })
+          .attr("font-size", "10px")
+          .text(function(d, i) {
+            return d.nodeName;
+          });
+      }
+
+      doSort(0);
+      update3();
+
+      function pathTween(transition, dummy) {
+        transition.attrTween("d", function(d) {
+          var interpolateX1 = d3.interpolate(
+            d.x1,
+            nodeDisplayX(nodes[d.target])
+          );
+          var interpolateX2 = d3.interpolate(
+            d.x2,
+            nodeDisplayX(nodes[d.source])
+          );
+          return function(t) {
+            d.x1 = interpolateX1(t);
+            d.x2 = interpolateX2(t);
+            arcBuilder.setRadii(d);
+            return arcBuilder();
+          };
+        });
+
+        transition.attrTween("transform", function(d) {
+          var interpolateX1 = d3.interpolate(
+            d.x1,
+            nodeDisplayX(nodes[d.target])
+          );
+          var interpolateX2 = d3.interpolate(
+            d.x2,
+            nodeDisplayX(nodes[d.source])
+          );
+          return function(t) {
+            d.x1 = interpolateX1(t);
+            d.x2 = interpolateX2(t);
+            return arcTranslation(d);
+          };
+        });
+      }
+
+      d3.select("#selectSort2").on("change", function() {
+        doSort(this.selectedIndex);
+        update3();
+      });
+
+      function doSort(sortMethod) {
+        var nodeMap = [],
+          sortFunciton;
+
+        for (i = 0; i < nodes.length; i++) {
+          var node = $.extend({ index: i }, nodes[i]); // Shallow copy
+          nodeMap.push(node);
+        }
+
+        if (sortMethod == 0) {
+          // GROUP
+          sortFunction = function(a, b) {
+            return b.group - a.group;
+          };
+        } else if (sortMethod == 1) {
+          // FREQUENCY
+          sortFunction = function(a, b) {
+            return b.value - a.value;
+          };
+        } else if (sortMethod == 2) {
+          // ALPHABETICAL
+          sortFunction = function(a, b) {
+            return a.nodeName.localeCompare(b.nodeName);
+          };
+        }
+
+        nodeMap.sort(sortFunction);
+        for (i = 0; i < nodeMap.length; i++) {
+          nodes[nodeMap[i].index].displayOrder = i;
+        }
+      }
+    </script>
+  </body>
+</html>
