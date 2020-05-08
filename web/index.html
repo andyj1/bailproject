@@ -13912,15 +13912,16 @@
                 <li data-menuanchor="3rdPage" style="background-color:white">
                   <a href="#demographic">Datasets</a>
                 </li>
-                <li data-menuanchor="6thPage" style="background-color:white">
+                <li data-menuanchor="4thPage" style="background-color:white">
+                  <a href="#bondanalysis">Bail Bond Analysis</a>
+                </li>                          
+                <li data-menuanchor="5thPage" style="background-color:white">
                   <a href="#ontology">Ontology</a>
                 </li>
-                <li data-menuanchor="7thPage" style="background-color:white">
+                <li data-menuanchor="6thPage" style="background-color:white">
                   <a href="#gamelink">Life on Bail</a>
                 </li>
-                <!-- <li data-menuanchor="5thPage" style="background-color:white">
-                  <a href="#insight1">Insight - 1</a>
-                </li>                          
+                <!--
                 <li data-menuanchor="4thPage" style="background-color:white">
                   <a href="#insight2">Insight - 2</a>
                 </li> -->
@@ -14053,32 +14054,53 @@
                               </h6> 
                               <h7>Arkansas</h7>
                               <h6 style="font-size:30px;font-weight:normal">
-                                  - For AR, WHITE and MALE were dominant.
-                                </h6>
+                                  - For AR, WHITE and MALE were dominant.  [Layer 1]
+                              </h6>
                               <div id="selectSort" class="image1" style="height:500px; margin-top:-250px; margin-left:27%;"></div>
-
+                              <h6 style="font-size:30px;font-weight:normal">
+                                  After pre-processing, percentage breakdown by BJS Broad Category:  [Layer 2]
+                                  <br />
+                                  <iframe style="margin-left:25% !important;" src="plots/AR_BJSBroadCategory.html" height="500" width="500"></iframe>  
+                              </h6>
+                              
                               <h7>Louisiana</h7>
                               <h6 style="font-size:30px;font-weight:normal">
-                                  - For LA, BLACK and MALE were dominant.
+                                  - For LA, BLACK and MALE were dominant.  [Layer 1]
                                 </h6>
                               <div id="selectSort2" class="image2" style="height:500px; margin-top:-250px; margin-left:30%;"></div>
-                              
+                              <h6 style="font-size:30px;font-weight:normal">
+                                  After pre-processing, percentage breakdown by BJS Broad Category:  [Layer 2]
+                                  <br />
+                                  <iframe style="margin-left:25% !important;" src="plots/LA_BJSBroadCategory.html" height="500" width="500"></iframe>  
+                              </h6>
+
                               <h7>Michigan</h7>
                               <h6 style="font-size:30px;font-weight:normal">
-                                  - Michigan did not provide demographic information about charged cases.
-                                </h6>
+                                  - Michigan did not provide demographic information about charged cases. 
+                              </h6>
+                              <h6 style="font-size:30px;font-weight:normal">
+                                  After pre-processing, percentage breakdown by BJS Broad Category:  [Layer 2]
+                                  <br />
+                                  <iframe style="margin-left:25% !important;" src="plots/MI_BJSBroadCategory.html" height="500" width="500"></iframe>  
+                              </h6>
 
                               <h7>New York</h7>
                               <h6 style="font-size:30px;font-weight:normal">
-                                  - For NY, BLACK and MALE were dominant.
+                                  - For NY, BLACK and MALE were dominant.  [Layer 1]
                                 </h6>
                               <div id="selectSort3" class="image3" style="height:500px; margin-top:-250px; margin-left:30%;"></div>
+                              <h6 style="font-size:30px;font-weight:normal">
+                                  After pre-processing, percentage breakdown by BJS Broad Category: [Layer 2]
+                                  <br />
+                                  <iframe style="margin-left:25% !important;" src="plots/NY_BJSBroadCategory.html" height="500" width="500"></iframe>  
+                              </h6>
 
                               <script src="js/arcjs.js"></script>
                               <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
                               <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
                               
                               <!-- arc diagram scripts -->
+                              <!-- Arkansas-->
                               <script>
                                   var i,
                                     width = 1000, //960,
@@ -14309,8 +14331,7 @@
                                   }
                                 </script>
                             
-                                <!-- Louisiana -->
-                            
+                                <!-- Louisiana -->                            
                                 <script>
                                   var i,
                                     width = 1000, //960,
@@ -14540,8 +14561,7 @@
                                   }
                                 </script>
                             
-                                <!-- New York -->
-                            
+                                <!-- New York -->                            
                                 <script>
                                   var i,
                                     width = 1000, //960,
@@ -14770,7 +14790,7 @@
                                     }
                                   }
                                 </script>
-
+                              
                             </h1>
                           </div>
                           <div class="slide-dots"></div>
@@ -14823,7 +14843,7 @@
                             </div>
                           </div>
 
-                          <br />
+                          <br /><br /><br /><br /><br /><br />
 
                           <h2 class="title">Louisiana</h2>
                           <div class="figures">
@@ -14868,7 +14888,7 @@
                             </div>
                           </div>
 
-                          <br />
+                          <br /><br /><br /><br /><br /><br />
 
                           <h2 class="title">Michigan</h2>
                           <div class="figures">
@@ -14889,7 +14909,7 @@
                             </div>
                           </div>
 
-                          <br />
+                          <br /><br /><br /><br /><br /><br />
 
                           <h2 class="title" >New York</h2>
                           <div class="figures">
@@ -14949,37 +14969,184 @@
                 </div>
                 </div>
 
-                <!-- <div id="insight2">
-                  <div class="outcome-block theme-tertiary slide" id="outcome-2">
+                
+
+                <div id="bondanalysis">
+                  <div class="outcome-block theme slide" id="outcome-2">
                     <div class="container">
                       <div class="cols">
                         <div class="col col-text">
                           <div class="text-container">
-                            <span class="outcome-metric" style="font-size:50px">Insights</span>
+                            <span class="outcome-metric" style="font-size:50px">Bail Bond Analysis</span>
                             <p class="outcome-text"
-                              style="font-size:30px;font-weight:normal;font-style:normal;margin-top:-20px">
-                              Insights - 1
+                              style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
+                              <b style="font-weight:bold">Layer 1</b>: 
+                              <br /> &nbsp;&nbsp;&nbsp;
+                              Total
+                              <br />
+                              <b style="font-weight:bold">Layer 2</b>: 
+                              <br />&nbsp;&nbsp;&nbsp;
+                              BJS Broad Category
+                              <br />
+                              <b style="font-weight:bold">Layer 3</b>: 
+                              <br />&nbsp;&nbsp;&nbsp;
+                              Placeholder / Meaningful bail bonds
+                              <br />
+                              <b style="font-weight:bold">Layer 4</b>: 
+                              <br />&nbsp;&nbsp;&nbsp;
+                              Bail bond amounts and Time spent in jail (within meaningful bail bonds)
+                              <br />
+                              <b style="font-weight:bold">Layer 5</b>: 
+                              <br />&nbsp;&nbsp;&nbsp;
+                              Time spent in jail (within each bail bond groups in Layer 4)
                             </p>
                           </div>
                         </div>
+                        <div class="col col-right col-figures">
+                            <div class="figures" style="content-align:center">
+                              <h2 class="title" style="font-weight:bold;font-style:italic">Layer 2: Public Order</h2>
+                              <br />
+                              <div class="compelling-figure">
+                                <h2 class="title" >Average Bail Bonds 
+                                <br >
+                                AR: $7,856.44 / LA: $29,989.47 / MI: $47.677.86 / NY: $9,544,323.86
+                                </h2>
+                                <iframe style="margin-left:25% !important;" src="plots/PublicOrderRace.html" height="500" width="700"></iframe>
+                                <h2 class="title" >highlights</h2>
+                                <iframe style="margin-left:25% !important;" src="plots/PublicOrderSex.html" height="500" width="700"></iframe>
+                              </div>
 
-                      </div>
-                      <div class="slide-controls">
-                        <div class="slide-dots"></div>
-                        <button class="next-slide-button" type="button" aria-label="See next outcome">
-                          <div class="arrow-icon">
-                            <svg viewBox="0 0 62 39" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M42.348 0L61.79 19.442 42.348 38.884l-3.987-3.987L50.996 22.26H0v-5.638l50.997-.001L38.361 3.987 42.348 0z"
-                                fill-rule="nonzero"></path>
-                            </svg>
+                            </div>      
                           </div>
-                        </button>
                       </div>
                     </div>
                   </div>
                 </div> 
 
+                <div id="">
+                  <div class="outcome-block theme slide" id="outcome-2">
+                    <div class="container">
+                      <div class="cols">
+                        <div class="col col-text">
+                          <div class="text-container">
+                            <span class="outcome-metric" style="font-size:50px"> </span>
+                            <p class="outcome-text"></p>
+                          </div>
+                        </div>
+                        <div class="col col-right col-figures">
+                            <div class="figures" style="content-align:center">
+                              <div class="compelling-figure">
+                                <h2 class="title" style="font-weight:bold;font-style:italic">Layer 2: Other</h2>
+                                <br />
+                                <h2 class="title" >Average Bail Bonds 
+                                <br >
+                                AR: $1,345.98 / LA: $9,571.8 / MI: $9,847.92 / NY: $126,626.00
+                                </h2>
+                                <iframe style="margin-left:25% !important;" src="plots/OtherRace.html" height="500" width="700"></iframe>
+                                <h2 class="title" >highlights</h2>
+                                <iframe style="margin-left:25% !important;" src="plots/OtherSex.html" height="500" width="700"></iframe>
+                              </div>
+                            </div>      
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+                <div id="">
+                  <div class="outcome-block theme slide" id="outcome-2">
+                    <div class="container">
+                      <div class="cols">
+                        <div class="col col-text">
+                          <div class="text-container">
+                            <span class="outcome-metric" style="font-size:50px"> </span>
+                            <p class="outcome-text"></p>
+                          </div>
+                        </div>
+                        <div class="col col-right col-figures">
+                            <div class="figures" style="content-align:center">
+                              <div class="compelling-figure">
+                                <h2 class="title" style="font-weight:bold;font-style:italic">Layer 2: Drug</h2>
+                                <br />
+                                <h2 class="title" >Average Bail Bonds 
+                                <br >
+                                AR: $2,958.19 / LA: $2,732.31 / MI: $16,237.20 / NY: $83,204.30
+                                </h2>
+                                <iframe style="margin-left:25% !important;" src="plots/DrugRace.html" height="500" width="700"></iframe>
+                                <h2 class="title" >highlights</h2>
+                                <iframe style="margin-left:25% !important;" src="plots/DrugSex.html" height="500" width="700"></iframe>
+                              </div>
+                            </div>      
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+                
+                <div id="">
+                  <div class="outcome-block theme slide" id="outcome-2">
+                    <div class="container">
+                      <div class="cols">
+                        <div class="col col-text">
+                          <div class="text-container">
+                            <span class="outcome-metric" style="font-size:50px"> </span>
+                            <p class="outcome-text"></p>
+                          </div>
+                        </div>
+                        <div class="col col-right col-figures">
+                            <div class="figures" style="content-align:center">
+                              <div class="compelling-figure">
+                                <h2 class="title" style="font-weight:bold;font-style:italic">Layer 2: Property</h2>
+                                <br />
+                                <h2 class="title" >Average Bail Bonds 
+                                <br >
+                                AR: $2,769.40 / LA: $7,661.00/ MI: $15,127.22 / NY: $128,644.96
+                                </h2>
+                                <iframe style="margin-left:25% !important;" src="plots/PropertyRace.html" height="500" width="700"></iframe>
+                                <h2 class="title" >highlights</h2>
+                                <iframe style="margin-left:25% !important;" src="plots/PropertySex.html" height="500" width="700"></iframe>
+                              </div>
+                            </div>      
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+
+                <div id="">
+                  <div class="outcome-block theme slide" id="outcome-2">
+                    <div class="container">
+                      <div class="cols">
+                        <div class="col col-text">
+                          <div class="text-container">
+                            <span class="outcome-metric" style="font-size:50px"> </span>
+                            <p class="outcome-text"></p>
+                          </div>
+                        </div>
+                        <div class="col col-right col-figures">
+                            <div class="figures" style="content-align:center">
+                              <div class="compelling-figure">
+                                <h2 class="title" style="font-weight:bold;font-style:italic">Layer 2: Violent</h2>
+                                <br />
+                                <h2 class="title" >Average Bail Bonds 
+                                <br >
+                                AR: $24,594.96 / LA: $4,587.01 / MI: $47,860.36 / NY: $84,819.30
+                                </h2>
+                                <iframe style="margin-left:25% !important;" src="plots/ViolentRace.html" height="500" width="700"></iframe>
+                                <h2 class="title" >highlights</h2>
+                                <iframe style="margin-left:25% !important;" src="plots/ViolentSex.html" height="500" width="700"></iframe>
+                              </div>
+                            </div>      
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+
+                <!--
                 <div id="insight1">
                   <div class="compelling-block slide">
                     <div class="cols">
@@ -15030,18 +15197,34 @@
                         </div>
                         <!-- add photo -->
                         <div class="next-slide-button" aria-label="ontology_char">
-                          <div style="align-content:horizontal;display:block;margin:auto;overflow:auto;color:black;font-weight:bold">
-                            <b style="color:white;font-weight:bold"> Some characteristics of an ontology include:</b> <br />
-                            - formal: should be readable by machines without human intervention <br />
-                            - explicit: should be able to interpret the word that bears multiple meanings <br />
-                            - shared: should be available and shared among people <br />
-                            - conceptualization: should represent an abstract model that describes concepts of entities <br />
-                            - domain: cannot represent entities of other domains <br />
+                          <div style="align-content:horizontal;display:block;margin:auto;overflow:auto;color:white;font-weight:normal" >
+                            <b style="font-weight:bold;font-size:20px;color:white">Some characteristics of an ontology include:</b> <br />
+                            - <b style="color:black;font-weight:bold">formal</b>: should be readable by machines without human intervention <br />
+                            - <b style="color:black;font-weight:bold">explicit</b>: should be able to interpret the word that bears multiple meanings <br />
+                            - <b style="color:black;font-weight:bold">shared</b>: should be available and shared among people <br />
+                            - <b style="color:black;font-weight:bold">conceptualization</b>: should represent an abstract model that describes concepts of entities <br />
+                            - <b style="color:black;font-weight:bold">domain</b>: cannot represent entities of other domains <br />
                           </div>
+                          <br />
+                          <div style="font-weight:bold;font-size:20px;color:white">Approach</div>
+                          <div  style="font-size:20px;color:white;font-weight:normal;font-family:verdana;margin:auto">
+                            <i class="fas fa-terminal" style="color:black"></i> Each state has its unique legislative definitions for charges <br />
+                            <i class="fas fa-terminal" style="color:black"></i> We linked their charge descriptions to the Bureau of Justice Statistics (BJS) charge descriptions
+                            <a href="img/chargemap/maps.pdf">
+                                <button class="next-slide-button" type="button" aria-label="See next outcome" style='font-size:15px;color:black'>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Click to see how we mapped state to national charges <i class="fa fa-file"></i>)
+                                </button>
+                              </a>
+                              <br />
+                            <i class="fas fa-terminal" style="color:black"></i> There are five BJS Broad Categories: Violent, Drug, Public Order, Property and Other  <br />
+                            <i class="fas fa-terminal" style="color:black"></i> Each of these categories has cases associated with zero or 1-dollar bail bonds, which we note as 'placeholder bonds' and the rest as 'meaningful bonds' in this tree  <br />
+                            <i class="fas fa-terminal" style="color:black"></i> In each of this subset, we again group by bond amounts (<= $1,000 and > $1,000) and further by time spent in jail (<=20 days and > 20 days)
+                          </div>
+                          <br />
                         </div>
                       </div>
                     </div>
-                    <p class="outcome-text" style="font-size:20px;color:white;font-weight:normal;font-family:verdana;margin-left:7%">
+                    <!-- <p class="outcome-text" style="font-size:20px;color:white;font-weight:normal;font-family:verdana;margin-left:7%">
                         <i class="fas fa-terminal" style="color:black"></i> Each state has its unique legislative definitions for charges <br />
                         <i class="fas fa-terminal" style="color:black"></i> We linked their charge descriptions to the Bureau of Justice Statistics (BJS) charge descriptions
                         <a href="img/chargemap/maps.pdf">
@@ -15052,8 +15235,9 @@
                           <br />
                         <i class="fas fa-terminal" style="color:black"></i> There are five BJS Broad Categories: Violent, Drug, Public Order, Property and Other  <br />
                         <i class="fas fa-terminal" style="color:black"></i> Each of these categories has cases associated with zero or 1-dollar bail bonds, which we note as 'placeholder bonds' and the rest as 'meaningful bonds' in this tree  <br />
-                        <i class="fas fa-terminal" style="color:black"></i> In each of this subset, we again group by bond amounts (<= $1,000 and > $1,000) and further by time spent in jail (<=20 days and > 20 days)  <br />
-                      </p>
+                        <i class="fas fa-terminal" style="color:black"></i> In each of this subset, we again group by bond amounts (<= $1,000 and > $1,000) and further by time spent in jail (<=20 days and > 20 days)
+                        <br />
+                      </p> -->
                         <img
                         src="img/ontology_tree_final.svg"
                         class="img-rounded" 
