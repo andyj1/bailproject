@@ -43,6 +43,47 @@
   </script>
 
   <style data-href="/styles.4d7ac08305b1dc98b4f7.css">
+  /* Highcharts style */
+  .highcharts-figure, .highcharts-data-table table {
+    min-width: 2000px; 
+    max-width: 250px;
+    margin: 1em auto;
+  }
+
+  #container {
+      /* height: 400px; */
+  }
+
+  .highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    /* width: 100%; */
+    max-width: 250px;
+  }
+  .highcharts-data-table caption {
+      padding: 1em 0;
+      font-size: 1.2em;
+      color: #555;
+  }
+  .highcharts-data-table th {
+    font-weight: 600;
+      padding: 0.5em;
+  }
+  .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+      padding: 0.5em;
+  }
+  .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+      background: #f8f8f8;
+  }
+  .highcharts-data-table tr:hover {
+      background: #f1f7ff;
+  }
+
+
+
     /* The progress container (grey background) */
   .progress-container {
     width: 100%;
@@ -15024,7 +15065,7 @@
                 </div> 
 
                 <div id="">
-                  <div class="outcome-block theme slide" id="outcome-2">
+                  <div class="outcome-block theme slide">
                     <div class="container">
                       <div class="cols">
                         <div class="col col-text">
@@ -15054,7 +15095,7 @@
                 </div> 
 
                 <div id="">
-                  <div class="outcome-block theme slide" id="outcome-2">
+                  <div class="outcome-block theme slide">
                     <div class="container">
                       <div class="cols">
                         <div class="col col-text">
@@ -15085,7 +15126,7 @@
 
                 
                 <div id="">
-                  <div class="outcome-block theme slide" id="outcome-2">
+                  <div class="outcome-block theme slide">
                     <div class="container">
                       <div class="cols">
                         <div class="col col-text">
@@ -15116,7 +15157,7 @@
 
 
                 <div id="">
-                  <div class="outcome-block theme slide" id="outcome-2">
+                  <div class="outcome-block theme slide">
                     <div class="container">
                       <div class="cols">
                         <div class="col col-text">
@@ -15145,7 +15186,753 @@
                   </div>
                 </div> 
 
+                
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+                
+                <div id="">
+                  <div class="outcome-block theme slide">
+                    <div class="container">
+                      <div class="cols">
+                        <div class="col col-text">
+                          <div class="text-container">
+                            <span class="outcome-metric" style="font-size:50px">Placeholder: $0 or $1 bail bonds assigned to multiple other charge cases. <br /> Meaningful: the first or most significant charge that holds non-zero (or non-$1) bail bond. </span>
+                            <br />
+                            <span class="outcome-metric" style="font-size:50px">Layer 3: Arkansas</span>
+                            <p class="outcome-text">
+                                <h> There is a high percentage of placeholder bail bond amounts (zero bail bonds), which means there are a lot of people detained for multiple different crimes. </h>
+                              <figure class="highcharts-figure" >
+                                <div style="float:left;clear:none">
+                                  <div id="containerAR1"></div>
+                                  <div id="containerAR2"></div>
+                                </div>
+                              </figure>
+                                <p class="highcharts-description">
+                                </p>
+                              </figure>
+                            </p>
+                            
+                          </div>
+                        </div>
+                        <div class="col col-right col-figures">
+                            <div class="figures" style="content-align:center">
+                              <div class="compelling-figure">
+                                <br /><br /><br /><br />
+                                <br /><br /><br /><br />
+                                <br /><br /><br /><br />
+                                <br /><br /><br />
+                                <!-- <h> Arkansas </h> -->
+                                <figure class="highcharts-figure" >
+                                  <div style="float:left;clear:none">
+                                    <div id="containerAR3"></div>
+                                    <div id="containerAR4"></div>
+                                  </div>
+                                  <p class="highcharts-description">
+                                  </p>
+                                </figure>
+                              </div>
+                            </div>      
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                <div id="">
+                    <div class="outcome-block theme slide">
+                      <div class="container">
+                        <div class="cols">
+                          <div class="col col-text">
+                            <div class="text-container">
+                              <span class="outcome-metric" style="font-size:50px">Layer 3: Louisiana</span>
+                              <p class="outcome-text">
+                                <h> There is a high percentage of placeholder bail bond amounts (zero bail bonds), which means there are a lot of people detained for multiple different crimes. </h>
+                                <figure class="highcharts-figure" >
+                                  <div style="float:left;clear:none">
+                                    <div id="containerLA1"></div>
+                                    <div id="containerLA2"></div>
+                                  </div>
+                                </figure>
+                                  <p class="highcharts-description">
+                                  </p>
+                                </figure>
+                              </p>
+                              
+                            </div>
+                          </div>
+                          <div class="col col-right col-figures">
+                              <div class="figures" style="content-align:center">
+                                <div class="compelling-figure">
+                                    <br /><br /><br /><br />
+                                    <br /><br /><br /><br />
+                                    <br /><br /><br /><br />
+                                    <br /><br /><br />
+                                  <!-- <h> Louisiana </h> -->
+                                  <figure class="highcharts-figure" >
+                                    <div style="float:left;clear:none">
+                                      <div id="containerLA3"></div>
+                                      <div id="containerLA4"></div>
+                                    </div>
+                                    <p class="highcharts-description">
+                                    </p>
+                                  </figure>
+                                </div>
+                              </div>      
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+                  <div id="">
+                      <div class="outcome-block theme slide">
+                        <div class="container">
+                          <div class="cols">
+                            <div class="col col-text">
+                              <div class="text-container">
+                                <span class="outcome-metric" style="font-size:50px">Layer 3: <br /> New York</span>
+                                <p class="outcome-text">
+                                  <h> Due to assumptions made in mapping state charges to national BJS charges, we do not observe any placeholder (dollar-bail) bail bonds. Refer to [Assumptions] for clarification. </h>
+                                  <figure class="highcharts-figure" >
+                                    <div style="float:left;clear:none">
+                                      <div id="containerNY1"></div>
+                                      <div id="containerNY2"></div>
+                                    </div>
+                                  </figure>
+                                    <p class="highcharts-description">
+                                    </p>
+                                  </figure>
+                                </p>
+                                
+                              </div>
+                            </div>
+                            <div class="col col-right col-figures">
+                                <div class="figures" style="content-align:center">
+                                  <div class="compelling-figure">
+                                      <br /><br /><br /><br />
+                                      <br /><br /><br /><br />
+                                      <br /><br /><br /><br />
+                                      <br /><br /><br />
+                                    <!-- <h> New York </h> -->
+                                    <figure class="highcharts-figure" >
+                                      <div style="float:left;clear:none">
+                                        <div id="containerNY3"></div>
+                                        <div id="containerNY4"></div>
+                                      </div>
+                                      <p class="highcharts-description">
+                                      </p>
+                                    </figure>
+                                  </div>
+                                </div>      
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
 
+
+                <script>
+                  
+                  // ARKANSAS
+                  Highcharts.chart('containerAR1', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Public Order: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: $0 (Placeholder), $49,971.63 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race (Hispanic)','Race (Indian)','Race(White)','Race (Other)','Sex (F)','Sex (M)','Sex (Other)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [16,743,390,14,3103,60,714,3601,11],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [5,110,78,7,587,9,186,621,0],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+                  Highcharts.chart('containerAR2', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Violent: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: $0 (Placeholder), $66,055.04 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race (Hispanic)','Race(White)','Race (Other)','Sex (F)','Sex (M)','Sex (Other)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [6,111,52,235,9,32,380,1],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [3,42,37,154,9,19,226,0],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+
+                  Highcharts.chart('containerAR3', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Drug: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: $0 (Placeholder), $9,874.66 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race (Hispanic)','Race (Indian)','Race(White)','Race (Other)','Sex (F)','Sex (M)','Sex (Other)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [0,112,73,3,465,4,168,488,1],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [0,32,29,1,215,4,67,213,1],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+
+                  Highcharts.chart('containerAR4', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Property: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: $0 (Placeholder), $9,209.48 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race (Hispanic)','Race(White)','Race (Other)','Sex (F)','Sex (M)','Sex (Other)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [2,87,32,270,2,71,320,2],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [0,38,19,108,4,23,146,0],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+                  // LOUISIANA
+
+                  Highcharts.chart('containerLA1', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Public Order: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: $0 (Placeholder), $103,082.13 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race (Hispanic)','Race(White)','Race (Other)','Sex (F)','Sex (M)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [9,9263,286,1963,117,1327,10311],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [2,3958,126,672,17,551,4224],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+
+                  Highcharts.chart('containerLA2', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Violent: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: $0 (Placeholder), $25,429.22 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race (Hispanic)','Race(White)','Race (Other)','Sex (F)','Sex (M)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [16,10634,184,2408,53,1975,11320],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [2,2274,26,607,17,553,2373],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+
+                  Highcharts.chart('containerLA3', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Drug: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: $0 (Placeholder), $12,770.05 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race (Hispanic)','Race (Indian)','Race(White)','Race (Other)','Sex (F)','Sex (M)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [1051,14,143,8,188,1028],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [236,33,58,4,76,255],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+
+                  Highcharts.chart('containerLA4', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Property: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: $0 (Placeholder), $9,209.48 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race (Hispanic)','Race(White)','Race (Other)','Sex (F)','Sex (M)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [3,6083,66,1458,65,873,6802],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [11,1839,37,495,2,329,2055],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+                  // NEW YORK
+
+                  Highcharts.chart('containerNY1', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Public Order: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $9,544,323.86 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race(White)','Race (Other)','Sex (F)','Sex (M)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [0,0,0,0,0,0],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [3,185,27,85,8,292],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+
+                  Highcharts.chart('containerNY2', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Violent: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $84,819.30 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race (Indian)','Race(White)','Race (Other)','Sex (F)','Sex (M)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [0,0,0,0,0,0,0],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [13,617,3,97,239,48,921],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+
+                  Highcharts.chart('containerNY3', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Drug: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $83,204.30 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Asian)', 'Race (Black)','Race(White)','Race (Other)','Sex (F)','Sex (M)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [0,0,0,0,0,0],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [1,28,6,19,1,53],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
+                <script>
+
+                  Highcharts.chart('containerNY4', {
+
+                  chart: {
+                  type: 'column'
+                  },
+
+                  title: {
+                  text: 'Property: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $128,644.96 (Meaningful)'
+                  },
+
+                  xAxis: {
+                  categories: ['Race (Black)','Race (Indian)','Race(White)','Race (Other)','Sex (F)','Sex (M)']
+                  },
+
+                  yAxis: {
+                  allowDecimals: true,
+                  min: 0,
+                  /* max: 4500, */
+                  title: {
+                      text: 'Number of People'
+                  }
+                  },
+
+                  tooltip: {
+                  formatter: function () {
+                      return '<b>' + this.x + '</b><br/>' +
+                          this.series.name + ': ' + this.y + '<br/>' +
+                          'Total: ' + this.point.stackTotal;
+                  }
+                  },
+
+                  plotOptions: {
+                  column: {
+                      stacking: 'normal'
+                  }
+                  },
+
+                  series: [{
+                  name: 'Placeholder',
+                  data: [0,0,0,0,0,0],
+                  stack: 'male'
+                  }, {
+                  name: 'Meaningful',
+                  data: [95,1,14,49,6,153],
+                  stack: 'male'
+                  }]
+                  });
+                </script>
                 <!--
                 <div id="insight1">
                   <div class="compelling-block slide">
@@ -15224,20 +16011,6 @@
                         </div>
                       </div>
                     </div>
-                    <!-- <p class="outcome-text" style="font-size:20px;color:white;font-weight:normal;font-family:verdana;margin-left:7%">
-                        <i class="fas fa-terminal" style="color:black"></i> Each state has its unique legislative definitions for charges <br />
-                        <i class="fas fa-terminal" style="color:black"></i> We linked their charge descriptions to the Bureau of Justice Statistics (BJS) charge descriptions
-                        <a href="img/chargemap/maps.pdf">
-                            <button class="next-slide-button" type="button" aria-label="See next outcome" style='font-size:15px;color:black'>
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Click to see how we mapped state to national charges <i class="fa fa-file"></i>)
-                            </button>
-                          </a>
-                          <br />
-                        <i class="fas fa-terminal" style="color:black"></i> There are five BJS Broad Categories: Violent, Drug, Public Order, Property and Other  <br />
-                        <i class="fas fa-terminal" style="color:black"></i> Each of these categories has cases associated with zero or 1-dollar bail bonds, which we note as 'placeholder bonds' and the rest as 'meaningful bonds' in this tree  <br />
-                        <i class="fas fa-terminal" style="color:black"></i> In each of this subset, we again group by bond amounts (<= $1,000 and > $1,000) and further by time spent in jail (<=20 days and > 20 days)
-                        <br />
-                      </p> -->
                         <img
                         src="img/ontology_tree_final.svg"
                         class="img-rounded" 
@@ -15247,51 +16020,6 @@
                     <br /><br />
                   </div>
 
-                <!-- <div id="ontology">
-                  <div class="outcome-block theme-secondary slide" id="outcome-2">
-                    <div class="container">
-                      <div class="cols">
-                        <div class="col col-text">
-                          <div class="text-container">
-                            <span class="outcome-metric" style="font-size:50px;color:black">Ontology</span>
-                            <p class="outcome-text" style="color:white">
-                              Ontology is a formal, explicit specification of a shared conceptualization of a domain of interest.
-                            </p>
-                            <div class="next-slide-button" aria-label="ontology_char">
-                              <div style="align-content:horizontal;display:block;margin:auto;overflow:auto">
-                                - formal: should be readable by machines without human intervention <br />
-                                - explicit: should be able to interpret the word that bears multiple meanings <br />
-                                - shared: should be available and shared among people <br />
-                                - conceptualization: should represent an abstract model that describes concepts of entities <br />
-                                - domain: cannot represent entities of other domains <br />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                      </div>
-                      <p class="outcome-text" style="font-size:20px;color:white;font-weight:normal;font-family:verdana">
-                          <i class="fas fa-terminal" style="color:black"></i> Each state has its unique legislative definitions for charges <br />
-                          <i class="fas fa-terminal" style="color:black"></i> We linked their charge descriptions to the Bureau of Justice Statistics (BJS) charge descriptions
-                          <a href="img/chargemap/maps.pdf">
-                              <button class="next-slide-button" type="button" aria-label="See next outcome" style='font-size:15px;color:gray'>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Click to see how we mapped state to national charges <i class="fa fa-file"></i>)
-                              </button>
-                            </a>
-                            <br />
-                          <i class="fas fa-terminal" style="color:black"></i> There are five BJS Broad Categories: Violent, Drug, Public Order, Property and Other  <br />
-                          <i class="fas fa-terminal" style="color:black"></i> Each of these categories has cases associated with zero or 1-dollar bail bonds, which we note as 'placeholder bonds' and the rest as 'meaningful bonds' in this tree  <br />
-                          <i class="fas fa-terminal" style="color:black"></i> In each of this subset, we again group by bond amounts (<= $1,000 and > $1,000) and further by time spent in jail (<=20 days and > 20 days)  <br />
-                      </p>
-                      <img
-                            src="img/ontology_tree_final.svg"
-                            class="img-rounded" 
-                            alt="Sample Drug Tree for Ontology"
-                            style="position:relative;top:0;left:0;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"
-                          />
-                      <br /><br />
-                  </div> -->
-                  
                   <div id="gamelink">
                     <div class="outcome-block theme-tertiary slide" id="outcome-3">
                       <div class="container">
@@ -15300,9 +16028,9 @@
                             <div class="text-container">
                               <span class="outcome-metric"style="color:black">Life on Bail</span>
                               <p class="outcome-text">
-                                Make decisions as someone who is detained on bail. <br />
-                                You choose your race, gender, and crime category. <br />
-                                See the average bail you must pay to be released from detention. <br />
+                                Make decisions as someone who is detained on bail. <br /><br />
+                                You choose your race, gender, and crime category. <br /><br />
+                                See the average bail you must pay to be released from detention. <br /><br />
                               </p>
                               
                             </div>
