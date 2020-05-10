@@ -15185,7 +15185,22 @@
                     </div>
                   </div>
                 </div> 
-
+                <div id="">
+                  <div class="outcome-block theme slide">
+                    <div class="container">
+                      <b style="font-size:15px">
+                        While organizing the NYC dataset, an unusually high amount of one and other single digit bail bond amounts was discovered. This was revealed to be a practice limited to NYC and has been aptly named dollar bail by those who are aware. Dollar bail is carried out ``when a defendant has 2 cases open simultaneously where one is more serious." In such a case, ``defense attorneys will often ask that a $1 bail be set on the more minor case" (<a href="https://www.dollarbailbrigade.com/" target="_blank" style="font-weight:bold"> dollar bail brigade</a>). Despite this incredibly low amount of bail, in a period between August 2018 and December 2018, "the city has locked up 149 detainees on just $1 bail, according to Correction Department records" (<a href="https://www.nydailynews.com/news/ny-metro-bail-one-dollar-20181223-story.html" target="_blank">news reference</a>). This happens as defendants are unable to pay for the dollar bail themselves when they are arrested. Furthermore, there are myriad of testimonies to prove the dollar bails' anachronistic nature. For an instance, a "Queens man languished on Rikers Island for five months in 2014 without knowing his bail was a mere $1" (<a href="https://www.nydailynews.com/new-york/nyc-crime/man-spent-months-rikers-unaware-bail-1-suing-city-article-1.3280884" target="_blank">news reference</a>). There have been more recent efforts to establish a more transparent system. Representative Lancman has introduced a bill to "ensure that the Department of Correction is promptly communicating with defendants detained solely for $1 bail" (<a href="https://council.nyc.gov/rory-lancman/2019/04/09/city-council-passes-lancman-bill-to-create-1-bail-notification-system/" target="_blank">news reference</a>). More direct approaches have been taken as well, as with the <a href="https://www.dollarbailbrigade.com/" target="_blank" style="font-weight:bold"> dollar bail brigade</a> where they hire volunteers to pay the dollar bail for the incarcerated. However, the group is unaware whether or not the individuals that have were part of the NYC data and has a dollar under a bond amount have been affected by the changes in the system. 
+                        <br />
+                        An analysis was run on the we-crawled NY data, specifically for all bail amounts less than $10 based on crime severity. Crime severity was assessed by sorting suspects into misdemeanor, felony, or both bins, with both representing a single suspect with simultaneous felony and misdemeanor charges. The Venn diagram below has relatively equal bin sizes, illustrating a lack of correlation. This hints at the entire bail system seemingly being arbitrary and opaque in general.
+                        <br />
+                        <div style="float:left;margin-left:25%">
+                          <img src="img/NYvenndiagram.png" style="max-width:600px"/>
+                        </div>
+                        <br />
+                      </b>
+                    </div>
+                  </div>
+                </div> 
                 
                 <script src="https://code.highcharts.com/highcharts.js"></script>
                 <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -15750,7 +15765,7 @@
                   },
 
                   title: {
-                  text: 'Public Order: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $9,544,323.86 (Meaningful)'
+                  text: 'Public Order: Placeholder ($1) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $9,544,323.86 (Meaningful)'
                   },
 
                   xAxis: {
@@ -15800,7 +15815,7 @@
                   },
 
                   title: {
-                  text: 'Violent: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $84,819.30 (Meaningful)'
+                  text: 'Violent: Placeholder ($1) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $84,819.30 (Meaningful)'
                   },
 
                   xAxis: {
@@ -15850,7 +15865,7 @@
                   },
 
                   title: {
-                  text: 'Drug: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $83,204.30 (Meaningful)'
+                  text: 'Drug: Placeholder ($1) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $83,204.30 (Meaningful)'
                   },
 
                   xAxis: {
@@ -15900,7 +15915,7 @@
                   },
 
                   title: {
-                  text: 'Property: Placeholder ($0) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $128,644.96 (Meaningful)'
+                  text: 'Property: Placeholder ($1) vs. Meaningful Bail Bonds (non $0) Composition. Avg bonds: - (Placeholder), $128,644.96 (Meaningful)'
                   },
 
                   xAxis: {
