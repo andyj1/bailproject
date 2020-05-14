@@ -117,7 +117,7 @@ var figure = {
             "title": {
                 "text": "Breakdown criteria / Number of people in the category"
             },
-            "autorange": false
+            "autorange": true
         },
         "template": {
             "data": {
