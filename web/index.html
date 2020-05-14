@@ -13969,10 +13969,10 @@
               </ul>
             <ul>
               <li>
-                <div> Bail System Knowledge</div>
+                <div> Your Bail System Knowledge</div>
                 <div style="font-weight:bold">
                   <b id="yourbailbond">
-                    0 %
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 %
                   </b>
                 </div>
               </li>
@@ -14006,7 +14006,7 @@
                         <br /><br />
                         We received datasets for four different states: Arkansas, Louisiana, Michigan and New York from The Bail Project, detailing crimes and associated bail bonds amounts. Each state has its own legislative charge definitions, and therefore we went through manual verificationi and mapping process in which we map state to national Bureau of Justice Statiscis charge codes. The bubbles in the map below are proportional to the sizes of each dataset. 
                         <br />
-                        Please view in a web browser, full screen at 100%.
+                        <b style="font-weight:bold">Please view in a web browser, full screen at 100%.</b>
                       </h7>
                       <div class="maps">
                         <div id="map" class="united-states">
@@ -14071,7 +14071,7 @@
                     <div class="slide-controls">
                       <div class="slide-dots"></div>
                       <a href="firstinfographic.html">
-                        <button class="next-slide-button" type="button" aria-label="See next outcome" style='font-size:24px;color:white'> Click to see our first infographic which provides additional background information.<br /> &nbsp;<i class='far fa-hand-point-right'></i><i class='far fa-hand-point-right'></i></button>
+                        <button class="next-slide-button" type="button" aria-label="See next outcome" style='font-size:24px;color:white'> Click to see our first infographic which provides additional background information.<br /> &nbsp;<i class='far fa-hand-point-right'></i>&nbsp;<i class='far fa-hand-point-right'></i></button>
                       </a>
                       
                     </div>
@@ -14140,6 +14140,54 @@
                                   <br />
                                   <iframe style="margin-left:25% !important;" src="plots/NY_BJSBroadCategory.html" height="500" width="500"></iframe>  
                               </h6>
+
+                              <h6 style="font-size:30px;font-weight:bold">
+                                Assumptions/Caveats throughout our data analysis
+                                <h6 style="font-size:20px;font-weight:normal">
+                                  <ul>
+                                    <li>
+                                        Data is not exhaustive and is only collected for a limited period of time
+                                    </li>
+                                    <li>
+                                        For NY, we observed that there is only one row of data with all charges concatenated. If the detained committed more than one crime, then the bail bond amount was in singles (multiple $1). From this observation, we assumed it was valid to take anything < $10 as "placeholder" dollar bails. However, due to all charges combined into one for each person, for the purpose of this analysis we only extracted the first charge, assuming that the first is the most significant and heavily weighted.
+                                    </li>
+                                    <li>
+                                        "Placeholder" bail bonds for the states AR, LA, and MI are the casaes with bail bonda amounts of $0. Filling in $0 for bails for multiple different charge cases (for single detained person) is observed across all state datasets, and we assume it is almost a tradition for other states as well.
+                                    </li>
+                                    <li>
+                                        In order to classify state-level charge descriptions, which were prone to human error in entering in data, into national Bureau of Justice Statistics (BJS) codes, we took a list of unique state-level charge descriptions and mapped to BJS codes manually by hand. This mapping is performed with our group's discretion. <a href="img/chargemap/maps.pdf">
+                                          <button class="next-slide-button" type="button" aria-label="See next outcome" style='font-size:15px;color:black'>
+                                            (see this document we used for mapping) <i class="fa fa-file"></i>)
+                                          </button>
+                                        </a>
+                                    </li>
+                                  </ul>
+                                </h6>
+                                <h6 style="font-size:30px;font-weight:bold">
+                                  Pre-processing Stage
+                                </h6>
+                                <h6 style="font-size:20px;font-weight:normal">
+                                  <ul>
+                                    <li>
+                                        <b style="font-weight:bold">Arkansas:</b>
+                                        (1) dropped duplicates (2) computed time in jail by subtracting booking date from release date
+                                    </li>
+                                    <li>
+                                        <b style="font-weight:bold">Louisiana:</b>
+                                      (1) dropped duplicates (2) computed time in jail by subtracting booking date from release date based on status
+                                    </li>
+                                    <li>
+                                        <b style="font-weight:bold">Michigan:</b>
+                                      (1) dropped duplicates (2) computed time in jail (expected) from sentence length
+                                    </li>
+                                    <li>
+                                        <b style="font-weight:bold">New York:</b>
+                                      (1) dropped duplicates (2) removed cases that has 'released', 'remanded','sentenced','unknown' in the bond information column
+                                    </li>
+                                  </ul>
+                                </h6>
+                              </h6>
+
 
                               <script src="js/arcjs.js"></script>
                               <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
@@ -15019,9 +15067,8 @@
                 <div id="bondanalysis">
                   <div class="outcome-block theme slide" id="outcome-2">
                     <div class="container">
-                      For each BJS Broad Category, We further group by the following criteria:
-                      <ul style="font-weight:bold; font-family=sans-serif">
-                        
+                      <b style="font-size:20px;font-weight:bold;font-family=sans-serif">For each BJS Broad Category, We further group by the following criteria:</b>
+                      <ul style="font-weight:normal;font-size:18px;font-family=sans-serif">
                         <li>
                           <span style="font-weight:normal">1. </span>
                           What are the raw distributions before pre-processing?
@@ -15043,6 +15090,7 @@
                           What are the distributions for the cases with bail bonds in (0, 1000] and [1000, Inf) groups AND time spent in jail in (0, 20] and [20, Inf) groups?
                         </li>
                       </ul>
+                      <br /><br />
                       <img src="img/breakdown_tree.png" width="500px"></img>
                     </div>
                   </div>
@@ -15098,7 +15146,7 @@
                             <p class="outcome-text"
                               style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
                               <h2 class="title">
-                                Text here
+                                Text
                               </h2>
                               <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
                             </p> 
@@ -15113,7 +15161,7 @@
                                 <h2 class="title" >
                                   Text
                                 </h2>
-                                <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                <iframe style="margin-left:25% !important;" src="plots/LA_PublicOrder/index.html" height="500" width="700"></iframe>
                               </div>
                             </div>      
                           </div>
@@ -15133,9 +15181,9 @@
                               <p class="outcome-text"
                                 style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
                                 <h2 class="title">
-                                  Text here
+                                  Text
                                 </h2>
-                                <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                <iframe style="margin-left:25% !important;" src="plots/MI_PublicOrder/index.html" height="500" width="700"></iframe>
                               </p> 
                             </div>
                           </div>
@@ -15148,7 +15196,7 @@
                                   <h2 class="title" >
                                     Text
                                   </h2>
-                                  <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                  <iframe style="margin-left:25% !important;" src="plots/NY_PublicOrder/index.html" height="500" width="700"></iframe>
                                 </div>
                               </div>      
                             </div>
@@ -15184,9 +15232,8 @@
                               <!-- <h2 class="title" style="font-weight:bold;font-style:italic">Layer 2: Public Order</h2> -->
                               <br />
                               <div class="compelling-figure">
-                                <h2 class="title" >Average Bail Bonds 
-                                <br >
-                                AR: $2,958.19 / LA: $2,732.31 / MI: $16,237.20 / NY: $83,204.30
+                                <h2 class="title">
+                                  Text                                
                                 </h2>
                                 <iframe style="margin-left:25% !important;" src="plots/DrugSex.html" height="500" width="700"></iframe>
                               </div>
@@ -15210,7 +15257,7 @@
                             <p class="outcome-text"
                               style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
                               <h2 class="title">
-                                Text here
+                                Text
                               </h2>
                               <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
                             </p> 
@@ -15225,7 +15272,7 @@
                                 <h2 class="title" >
                                   Text
                                 </h2>
-                                <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                <iframe style="margin-left:25% !important;" src="plots/LA_PublicOrder/index.html" height="500" width="700"></iframe>
                               </div>
                             </div>      
                           </div>
@@ -15245,9 +15292,9 @@
                               <p class="outcome-text"
                                 style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
                                 <h2 class="title">
-                                  Text here
+                                  Text
                                 </h2>
-                                <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                <iframe style="margin-left:25% !important;" src="plots/MI_PublicOrder/index.html" height="500" width="700"></iframe>
                               </p> 
                             </div>
                           </div>
@@ -15260,7 +15307,7 @@
                                   <h2 class="title" >
                                     Text
                                   </h2>
-                                  <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                  <iframe style="margin-left:25% !important;" src="plots/NY_PublicOrder/index.html" height="500" width="700"></iframe>
                                 </div>
                               </div>      
                             </div>
@@ -15296,9 +15343,8 @@
                               <!-- <h2 class="title" style="font-weight:bold;font-style:italic">Layer 2: Public Order</h2> -->
                               <br />
                               <div class="compelling-figure">
-                                <h2 class="title" >Average Bail Bonds 
-                                <br >
-                                AR: $2,769.40 / LA: $7,661.00/ MI: $15,127.22 / NY: $128,644.96
+                                <h2 class="title">
+                                  Text                                
                                 </h2>
                                 <iframe style="margin-left:25% !important;" src="plots/PropertySex.html" height="500" width="700"></iframe>
                               </div>
@@ -15323,7 +15369,7 @@
                             <p class="outcome-text"
                               style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
                               <h2 class="title">
-                                Text here
+                                Text
                               </h2>
                               <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
                             </p> 
@@ -15338,7 +15384,7 @@
                                 <h2 class="title" >
                                   Text
                                 </h2>
-                                <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                <iframe style="margin-left:25% !important;" src="plots/LA_PublicOrder/index.html" height="500" width="700"></iframe>
                               </div>
                             </div>      
                           </div>
@@ -15358,9 +15404,9 @@
                               <p class="outcome-text"
                                 style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
                                 <h2 class="title">
-                                  Text here
+                                  Text
                                 </h2>
-                                <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                <iframe style="margin-left:25% !important;" src="plots/MI_PublicOrder/index.html" height="500" width="700"></iframe>
                               </p> 
                             </div>
                           </div>
@@ -15373,7 +15419,7 @@
                                   <h2 class="title" >
                                     Text
                                   </h2>
-                                  <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                  <iframe style="margin-left:25% !important;" src="plots/NY_PublicOrder/index.html" height="500" width="700"></iframe>
                                 </div>
                               </div>      
                             </div>
@@ -15410,9 +15456,8 @@
                               <!-- <h2 class="title" style="font-weight:bold;font-style:italic">Layer 2: Public Order</h2> -->
                               <br />
                               <div class="compelling-figure">
-                                <h2 class="title" >Average Bail Bonds 
-                                <br >
-                                AR: $24,594.96 / LA: $4,587.01 / MI: $47,860.36 / NY: $84,819.30
+                                <h2 class="title">
+                                  Text                                
                                 </h2>
                                 <iframe style="margin-left:25% !important;" src="plots/ViolentSex.html" height="500" width="700"></iframe>
                               </div>
@@ -15436,7 +15481,7 @@
                             <p class="outcome-text"
                               style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
                               <h2 class="title">
-                                Text here
+                                Text
                               </h2>
                               <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
                             </p> 
@@ -15451,7 +15496,7 @@
                                 <h2 class="title" >
                                   Text
                                 </h2>
-                                <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                <iframe style="margin-left:25% !important;" src="plots/LA_PublicOrder/index.html" height="500" width="700"></iframe>
                               </div>
                             </div>      
                           </div>
@@ -15471,9 +15516,9 @@
                               <p class="outcome-text"
                                 style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
                                 <h2 class="title">
-                                  Text here
+                                  Text
                                 </h2>
-                                <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                <iframe style="margin-left:25% !important;" src="plots/MI_PublicOrder/index.html" height="500" width="700"></iframe>
                               </p> 
                             </div>
                           </div>
@@ -15486,7 +15531,7 @@
                                   <h2 class="title" >
                                     Text
                                   </h2>
-                                  <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="700"></iframe>
+                                  <iframe style="margin-left:25% !important;" src="plots/NY_PublicOrder/index.html" height="500" width="700"></iframe>
                                 </div>
                               </div>      
                             </div>
@@ -15525,6 +15570,9 @@
                   <div class="outcome-block theme slide">
                     <div class="container">
                       <b style="font-size:50px">"Placeholder" Bail Bonds</b>
+                      <br />
+                      <b style="font-size:20px">Dollar bail info</b>
+                      <br /><br />
                       <div class="cols">
                         <div class="col col-text">
                           <div class="text-container">
@@ -15558,9 +15606,6 @@
                                 <br /><br /><br /><br />
                                 <br /><br /><br /><br />
                                 <br /><br /><br /><br />
-                                <br /><br /><br /><br />
-                                <br /><br /><br /><br />
-                                <br /><br />
                                 <!-- <h> Arkansas </h> -->
                                 <figure class="highcharts-figure" >
                                   <div style="float:left;clear:none">
@@ -15607,7 +15652,6 @@
                                   <br /><br /><br /><br />
                                   <br /><br /><br /><br />
                                   <br /><br /><br /><br />
-                                  <br /><br /><br />
                                 <!-- <h> Louisiana </h> -->
                                 <figure class="highcharts-figure" >
                                   <div style="float:left;clear:none">
@@ -15653,7 +15697,6 @@
                                       <br /><br /><br /><br />
                                       <br /><br /><br /><br />
                                       <br /><br /><br /><br />
-                                      <br /><br /><br />
                                     <!-- <h> New York </h> -->
                                     <figure class="highcharts-figure" >
                                       <div style="float:left;clear:none">
@@ -16335,15 +16378,15 @@
                           </div>
                           <br />
                           <div style="font-weight:bold;font-size:20px;color:white">Approach</div>
-                          <div  style="font-size:20px;color:white;font-weight:normal;font-family:verdana;margin:auto">
+                          <div  style="color:white;font-weight:normal;margin:auto">
                             <i class="fas fa-terminal" style="color:black"></i> Each state has its unique legislative definitions for charges <br />
                             <i class="fas fa-terminal" style="color:black"></i> We linked their charge descriptions to the Bureau of Justice Statistics (BJS) charge descriptions
                             <a href="img/chargemap/maps.pdf">
-                                <button class="next-slide-button" type="button" aria-label="See next outcome" style='font-size:15px;color:black'>
-                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Click to see how we mapped state to national charges <i class="fa fa-file"></i>)
-                                </button>
-                              </a>
-                              <br />
+                              <button class="next-slide-button" type="button" aria-label="See next outcome" style='font-size:15px;color:black'>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Click to see how we mapped state to national charges <i class="fa fa-file"></i>)
+                              </button>
+                            </a>
+                            <br />
                             <i class="fas fa-terminal" style="color:black"></i> There are five BJS Broad Categories: Violent, Drug, Public Order, Property and Other  <br />
                             <i class="fas fa-terminal" style="color:black"></i> Each of these categories has cases associated with zero or 1-dollar bail bonds, which we note as 'placeholder bonds' and the rest as 'meaningful bonds' in this tree  <br />
                             <i class="fas fa-terminal" style="color:black"></i> In each of this subset, we again group by bond amounts (<= $1,000 and > $1,000) and further by time spent in jail (<=20 days and > 20 days)
@@ -16352,12 +16395,14 @@
                         </div>
                       </div>
                     </div>
-                        <img
-                        src="img/ontology_tree_final.svg"
-                        class="img-rounded" 
-                        alt="Sample Drug Tree for Ontology"
-                        style="position:relative;top:0;left:0;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"
-                        />
+                    <b style="color:white;font-weight:bold">Explanation?</b>
+                    <br />
+                    <img
+                      src="img/ontology_tree_final.svg"
+                      class="img-rounded" 
+                      alt="Sample Drug Tree for Ontology"
+                      style="position:relative;top:0;left:0;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"
+                      />
                     <br /><br />
                   </div>
 
