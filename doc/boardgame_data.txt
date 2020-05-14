@@ -1,0 +1,8 @@
+Arkansas stats: {'public order': 5133, 'other': 1178, 'drug': 938, 'property': 562, 'violent': 658}
+violent, black male avg bail bond: 24971.05693069307
+
+Louisiana stats: {'property': 10059, 'other': 4105, 'violent': 16221, 'public order': 16413, 'drug': 1547}
+violent, black male avg bail bond: 5130.885123785876
+
+New York stats: {'violent': 970, 'public order': 65, 'property': 159, 'other': 300, 'drug': 54}
+violent, black male avg bail bond: 85799.36482084691
