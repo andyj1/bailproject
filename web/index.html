@@ -13976,10 +13976,7 @@
                                                             <h1 calss="title" style="color:black">Datasets</h1>
                                                             <h6 style="font-size:20px;font-weight:normal">
                                                                 We were provided with web-crawled datasets from four regions:
-                                                                <br /><br />
-                                                                The datasets contained information regarding bail bond amounts which were tied to crime descriptions committed in the region. Some datsets contained information on race, sex, and time held in prison. 
-                                                                <br /><br />
-                                                                For each region, we started by analyzing demographic compostion, focusing on suspect race and sex. We also analyzed the distribution of crime types, which were categorized into BJS broad categories.
+                                                                
 
                                                             </h6>
                                                             <h4 style="font-size:40px;font-weight:normal;color:lightyellow">
@@ -13987,6 +13984,10 @@
                                                             </h4>
                                                             <h6 style="font-size:20px;font-weight:normal">
                                                                 Each region had a different demographic composition, illustrated below:
+                                                                <br /><br />
+                                                                The datasets contained information regarding bail bond amounts which were tied to crime descriptions committed in the region. Some datsets contained information on race, sex, and time held in prison. 
+                                                                <br /><br />
+                                                                For each region, we started by analyzing demographic compostion, focusing on suspect race and sex. We also analyzed the distribution of crime types, which were categorized into BJS broad categories.
                                                             </h6>
                                                             <h7>Arkansas</h7>
                                                             <h6 style="font-size:30px;font-weight:normal">
@@ -15016,16 +15017,21 @@
                                 <div id="">
                                     <div class="outcome-block theme slide">
                                         <div class="container">
+                                            <b style="color:gray">
+                                                Note: Michigan’s time is taken from an expected sentence length, not from actual booking and release dates, and Michigan dataset did not have demographic information.
+                                            </b>
+                                            <br />
                                             <div class="cols">
 
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <span class="outcome-metric" style="font-size:30px">BJS Broad Category: 
-                                  <p style="font-size:45px">
-                                      Public Order
-                                  </p>
-                                </span>
+                                                        <p style="font-size:45px">
+                                                            Public Order
+                                                        </p>
+                                                        </span>
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
+                                                            <br /><br /><br /><br />
                                                             <iframe style="margin-left:25% !important;" src="plots/PublicOrderRace.html" height="500" width="600"></iframe>
                                                         </p>
                                                     </div>
@@ -15037,7 +15043,12 @@
                                                         <div class="compelling-figure">
                                                             <br />
                                                             <h2 class="title">
-                                                                In this category, the demographic distributions (race and gender) are shown below. (Highlights) We look at the average bail bonds because the range is quite large for analysis.
+                                                                In this category, the demographic distributions (race and gender) are shown below. 
+                                                                <br /><br />
+                                                                From looking at the graphs below, one can see that there is an obvious disparity in how each demographic gets charged between the states; whites in Arkansas are much more likely to receive a charge on Public Order compared to people of color in the state, while in New York and especially in Louisiana the opposite is true.  
+                                                                <br /><br />
+                                                                The sexes of those charged are majority male, with little to no data available for females charged in the states. There was no data available for people that identified as ‘other,’ or non-gender conforming.
+
                                                             </h2>
                                                             <iframe style="margin-left:25% !important;" src="plots/PublicOrderSex.html" height="500" width="600"></iframe>
                                                         </div>
@@ -15052,14 +15063,22 @@
                                 <div id="">
                                     <div class="outcome-block theme slide">
                                         <div class="container">
+                                            <h2 class="title">
+                                                In Arkansas, the bail amounts were largely concentrated in the categories showing that the amount was greater than $1,000, and those charged spent at least 20 days in jail. 
+                                                <br /><br />
+                                                In Louisiana, our data was split amongst four different categories, with the largest showing that bail is greater than $1,000 and time spent in jail greater than or equal to 20 days, and the smallest number of data residing in the category representing the bail amount being less than or equal to $1,000, and time spent in jail greater than 20 days.
+                                                <br /><br />
+                                                In Michigan, most of the data is lumped between the two categories, bail amount greater than $1,000 and time spent less than or equal to 20 days, or bail amount less than or equal to $1,000 with time spent in jail less than or equal to 20 days.
+                                                <br /><br />
+                                                In New York, the data was all concentrated in the category of bail amount being larger than $1,000, with one outlier in the less than or equal to $1,000 category. 
+                                                
+                                            </h2>
                                             <div class="cols">
 
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
-                                                            <h2 class="title">
-                                                                Text
-                                                            </h2>
+                                                            <br/><br/><br/><br/>
                                                             <iframe style="margin-left:25% !important;" src="plots/AR_PublicOrder/index.html" height="500" width="600"></iframe>
                                                         </p>
                                                     </div>
@@ -15070,9 +15089,9 @@
                                                     <div class="figures" style="content-align:center">
                                                         <div class="compelling-figure">
                                                             <br />
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
                                                             <iframe style="margin-left:25% !important;" src="plots/LA_PublicOrder/index.html" height="500" width="600"></iframe>
                                                         </div>
                                                     </div>
@@ -15091,9 +15110,10 @@
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
+                                                            <br /><br /><br />
                                                             <iframe style="margin-left:25% !important;" src="plots/MI_PublicOrder/index.html" height="500" width="600"></iframe>
                                                         </p>
                                                     </div>
@@ -15103,10 +15123,10 @@
                                                 <div class="col col-right col-figures">
                                                     <div class="figures" style="content-align:center">
                                                         <div class="compelling-figure">
-                                                            <br />
-                                                            <h2 class="title">
+                                                            
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
                                                             <iframe style="margin-left:25% !important;" src="plots/NY_PublicOrder/index.html" height="500" width="600"></iframe>
                                                         </div>
                                                     </div>
@@ -15125,11 +15145,12 @@
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <span class="outcome-metric" style="font-size:30px">BJS Broad Category: 
-                                    <p style="font-size:50px">
-                                      Drug
-                                    </p>
-                                  </span>
+                                                        <p style="font-size:50px">
+                                                        Drug
+                                                        </p>
+                                                    </span>
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
+                                                                <br /><br /><br /><br /><br />
                                                             <iframe style="margin-left:25% !important;" src="plots/DrugRace.html" height="500" width="600"></iframe>
                                                         </p>
 
@@ -15143,7 +15164,10 @@
                                                         <br /><br />
                                                         <div class="compelling-figure">
                                                             <h2 class="title">
-                                                                Text
+                                                                From looking at the graphs below, we can see that the data of charged demographic for drug-related crimes is very similar to the heatgraphs above relating to public order charges. Arkansas is still charging a larger amount of white people compared to Louisiana and New York, where most of the people being processed for drug related crimes are people of color. It is important to note that for the new York data we received, we are assuming that the race category “Other” refers to people of Hispanic heritage. 
+                                                                <br /><br />
+                                                                Similar to the graphics for the Public Order graph, we can see that the majority of those charged are male, and there is no data collected for individuals identifying as “other.”
+                                                                    
                                                             </h2>
                                                             <iframe style="margin-left:25% !important;" src="plots/DrugSex.html" height="500" width="600"></iframe>
                                                         </div>
@@ -15160,14 +15184,25 @@
                                 <div id="">
                                     <div class="outcome-block theme slide">
                                         <div class="container">
+                                            <h2 class="title">
+                                                In Arkansas, the bail bond data was divided amongst two groups, with the most charges being larger than $1,000 and consisting of the time spent in jail greater than or equal to 20 days, and the least amount of data relating to charges less than or equal to $1,000 and time spent in jail less than or equal to 20 days.
+                                                <br /><br />
+                                                In Louisiana, data was collected from four categories, with most of them evenly split between both spending less than or equal to 20 days in jail and more people with a bail amount greater than $1,000, than the bail amount being less than or equal to $1,000.
+                                                <br /><br />
+                                                In Michigan, there is a disproportionately large amount cf data with the time spent in jail being less than or equal to 20 days, and more charges being less than or equal to $1,000 than there are with an amount larger than $1,000.
+                                                <br /><br />
+                                                In New York, the data was in the majority showing the bail amount greater than $1,000. 
+                                                    
+                                            </h2>
                                             <div class="cols">
 
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
+                                                            <br/><br/><br/><br/>
                                                             <iframe style="margin-left:25% !important;" src="plots/AR_Drug/index.html" height="500" width="600"></iframe>
                                                         </p>
                                                     </div>
@@ -15178,9 +15213,9 @@
                                                     <div class="figures" style="content-align:center">
                                                         <div class="compelling-figure">
                                                             <br />
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
                                                             <iframe style="margin-left:25% !important;" src="plots/LA_Drug/index.html" height="500" width="600"></iframe>
                                                         </div>
                                                     </div>
@@ -15199,9 +15234,10 @@
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
+                                                            <br /><br /><br />
                                                             <iframe style="margin-left:25% !important;" src="plots/MI_Drug/index.html" height="500" width="600"></iframe>
                                                         </p>
                                                     </div>
@@ -15211,10 +15247,10 @@
                                                 <div class="col col-right col-figures">
                                                     <div class="figures" style="content-align:center">
                                                         <div class="compelling-figure">
-                                                            <br />
+                                                            <!-- <br />
                                                             <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
                                                             <iframe style="margin-left:25% !important;" src="plots/NY_Drug/index.html" height="500" width="600"></iframe>
                                                         </div>
                                                     </div>
@@ -15233,12 +15269,13 @@
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <span class="outcome-metric" style="font-size:30px">BJS Broad Category: 
-                                    <p style="font-size:50px">
-                                      Property
-                                    </p>
-                                  </span>
+                                                        <p style="font-size:50px">
+                                                        Property
+                                                        </p>
+                                                    </span>
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
-                                                            <iframe style="margin-left:25% !important;" src="plots/PropertyRace.html" height="500" width="600"></iframe>
+                                                        <br /><br /><br /><br /><br /><br />
+                                                        <iframe style="margin-left:25% !important;" src="plots/PropertyRace.html" height="500" width="600"></iframe>
                                                         </p>
 
                                                     </div>
@@ -15251,8 +15288,12 @@
                                                         <br />
                                                         <div class="compelling-figure">
                                                             <h2 class="title">
-                                                                Text
+                                                                From looking at the graphs below, we can see that the data of charged demographic for property-related crimes is very similar to the heatgraphs above relating to drug charges. Arkansas is still charging a larger amount of white people compared to Louisiana and New York, where most of the people being processed for property related crimes are people of color. It is important to note that for the new York data we received, we are assuming that the race category “Other” refers to people of Hispanic heritage. In Louisiana, one change is that slightly more white people are being charged and in New York, slightly more black people are being charged on property related crimes.
+                                                                <br /><br />
+                                                                Similar to the graphics for the Public Order graph, we can see that the majority of those charged are male, and there is no data collected for individuals identifying as “other”. Arkansas charged more females than the other states. 
+                                                                    
                                                             </h2>
+                                                            
                                                             <iframe style="margin-left:25% !important;" src="plots/PropertySex.html" height="500" width="600"></iframe>
                                                         </div>
                                                     </div>
@@ -15269,14 +15310,25 @@
                                 <div id="">
                                     <div class="outcome-block theme slide">
                                         <div class="container">
+                                            <h2 class="title">
+                                                In Arkansas, a small amount of data was recorded for bail amounts less than or equal to $1,000, and time spent in jail less than or equal to 20 days. Most of the data fell under the category of bail amount greater than $1,000. 
+                                                <br /><br />
+                                                In Louisiana, most of the bail amount data was recorded in the categories of just spending time in jail or just paying bail, with most people paying more than $1,000 for bail and spending more than 20 days in jail.
+                                                <br /><br />
+                                                In Michigan, the majority of the data collected shows that the time spent in jail is less than or equal to 20 days, with a similar amount of data both in bail is greater than $1,000 and in the bail being less than or equal to $1,000.
+                                                <br /><br />
+                                                In New York most of the data collected shows that the bail was greater than $1,000, with a small amount showing the bail being less than or equal to $1,000.  
+                                                    
+                                            </h2>
                                             <div class="cols">
 
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
-                                                            <h2 class="title">
-                                                                Text
-                                                            </h2>
+                                                            <!-- <h2 class="title">
+                                                                Textd
+                                                            </h2> -->
+                                                            <br /><br /><br /><br />
                                                             <iframe style="margin-left:25% !important;" src="plots/AR_Property/index.html" height="500" width="600"></iframe>
                                                         </p>
                                                     </div>
@@ -15287,9 +15339,9 @@
                                                     <div class="figures" style="content-align:center">
                                                         <div class="compelling-figure">
                                                             <br />
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
                                                             <iframe style="margin-left:25% !important;" src="plots/LA_Property/index.html" height="500" width="600"></iframe>
                                                         </div>
                                                     </div>
@@ -15308,9 +15360,10 @@
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
+                                                            <br /><br /><br />
                                                             <iframe style="margin-left:25% !important;" src="plots/MI_Property/index.html" height="500" width="600"></iframe>
                                                         </p>
                                                     </div>
@@ -15320,10 +15373,10 @@
                                                 <div class="col col-right col-figures">
                                                     <div class="figures" style="content-align:center">
                                                         <div class="compelling-figure">
-                                                            <br />
+                                                            <!-- <br />
                                                             <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
                                                             <iframe style="margin-left:25% !important;" src="plots/NY_Property/index.html" height="500" width="600"></iframe>
                                                         </div>
                                                     </div>
@@ -15348,6 +15401,7 @@
                                                             </p>
                                                             </span>
                                                             <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
+                                                                <br /><br /><br /><br />
                                                                 <iframe style="margin-left:25% !important;" src="plots/ViolentRace.html" height="500" width="600"></iframe>
                                                             </p>
 
@@ -15361,7 +15415,10 @@
                                                         <br />
                                                         <div class="compelling-figure">
                                                             <h2 class="title">
-                                                                Text
+                                                                From looking at the graphs below, we can see that the demographic for violent crimes is similar to the heat graphs above relating to property and drug charges. Arkansas is charging a larger amount of white people compared to Louisiana and New York, where most of the people being processed for violent related crimes are people of color. Arkansas has slightly more charges associated with White people. New York had slightly more charges associated with “Other” races.
+                                                                <br /><br />
+                                                                Similar to the graphics for the Property graph, we can see that the majority of those violent charges are male, and there is no data collected for individuals identifying as “Other” races. Specifically, Arkansas charged more males and Louisiana charged more females when compared with the other Broad Categories. 
+                                                                    
                                                             </h2>
                                                             <iframe style="margin-left:25% !important;" src="plots/ViolentSex.html" height="500" width="600"></iframe>
                                                         </div>
@@ -15378,14 +15435,27 @@
                                 <div id="">
                                     <div class="outcome-block theme slide">
                                         <div class="container">
+                                            <h2 class="title">
+                                                In Arkansas, the data is collected from only two categories, with bail being less than or equal to $1,000 and time spent in jail less than or equal to 20 days, or bail being greater than $1,000 with no jail time.
+                                                <br /><br />
+                                                In Louisiana, the majority of the data shows that the bail charged is greater than $1,000, and the time spent in jail is less than or equal to 20 days. 
+                                                <br /><br />
+                                                In Michigan, the majority of data shows that the bail is greater than $1,000 and that the time in jail spent was less than or equal to 20 days.
+                                                <br /><br />
+                                                In New York, the majority of the data collected shows that the bail amounts are larger than $1,000. 
+                                                <br /><br />
+                                                In summary, New York is the state whose bail charges are in the majority more expensive than $1,000.  
+                                                    
+                                            </h2>
                                             <div class="cols">
 
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
+                                                            <br /><br /><br /><br />
                                                             <iframe style="margin-left:25% !important;" src="plots/AR_Violent/index.html" height="500" width="600"></iframe>
                                                         </p>
                                                     </div>
@@ -15396,9 +15466,9 @@
                                                     <div class="figures" style="content-align:center">
                                                         <div class="compelling-figure">
                                                             <br />
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
                                                             <iframe style="margin-left:25% !important;" src="plots/LA_Violent/index.html" height="500" width="600"></iframe>
                                                         </div>
                                                     </div>
@@ -15417,9 +15487,10 @@
                                                 <div class="col col-text">
                                                     <div class="text-container">
                                                         <p class="outcome-text" style="font-size:20px;font-weight:normal;font-style:normal;margin-top:-20px">
-                                                            <h2 class="title">
+                                                            <!-- <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
+                                                            <br /><br /><br />
                                                             <iframe style="margin-left:25% !important;" src="plots/MI_Violent/index.html" height="500" width="600"></iframe>
                                                         </p>
                                                     </div>
@@ -15429,10 +15500,10 @@
                                                 <div class="col col-right col-figures">
                                                     <div class="figures" style="content-align:center">
                                                         <div class="compelling-figure">
-                                                            <br />
+                                                            <!-- <br />
                                                             <h2 class="title">
                                                                 Text
-                                                            </h2>
+                                                            </h2> -->
                                                             <iframe style="margin-left:25% !important;" src="plots/NY_Violent/index.html" height="500" width="600"></iframe>
                                                         </div>
                                                     </div>
