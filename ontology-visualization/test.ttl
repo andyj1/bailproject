@@ -1,0 +1,64 @@
+@prefix : <http://dig.isi.edu/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:United_States a owl:Class;
+    :has_state :State .
+:State a owl:Class ;
+    :have_data :Arkansas,:Louisiana, :Michigan, :NewYork .
+
+:Arkansas a owl:Class;
+    :has_crimes :AR_Charges .
+:Louisiana a owl:Class;
+    :has_crimes :LA_Charges .
+:Michigan a owl:Class;
+    :has_crimes :MI_Charges .
+:NewYork a owl:Class;
+    :has_crimes :NY_Charges .
+
+:AR_Charges a owl:Class ;
+    :link :BJSCodes .
+:LA_Charges a owl:Class ;
+    :link :BJSCodes .
+:MI_Charges a owl:Class ;
+    :link :BJSCodes .
+:NY_Charges a owl:Class ;
+    :link :BJSCodes .
+
+
+:Bureau_of_Justice_Statistics a owl:Class ;
+    :categorize :BJSCategory, :BJSCodes . 
+:BJSCodes a owl:Class ;
+    :link :BJSCategory, :BJSCategory .
+:BJSCategory a owl:Class ;
+    :has :violent, :drug, :property, :public_order, :other .
+
+:violent a owl:Class ;
+    :has :placeholder_bonds, :meaningful_bonds .
+:drug a owl:Class ;
+    :has :placeholder_bonds, :meaningful_bonds .
+:property a owl:Class ;
+    :has :placeholder_bonds, :meaningful_bonds .
+:public_order a owl:Class ;
+    :has :placeholder_bonds, :meaningful_bonds .
+:other a owl:Class ;
+    :has :placeholder_bonds, :meaningful_bonds .
+
+:placeholder_bonds a owl:Class ;
+    :has :race, :gender, :ethnicity, :time_spent_in_jail, :bond_amount, :age .
+:meaningful_bonds a owl:Class ;
+    :has :race, :gender, :ethnicity, :time_spent_in_jail, :bond_amount, :age .
+
+:bond_amount a owl:Class ;
+    :has :less_than_1000, :more_than_1000 .
+:less_than_1000 a owl:Class ;
+    :group "<= 20_days", ">20_days" .
+:more_than_1000 a owl:Class ;
+    :group "<= 20_days", ">20_days" .
+:time_spent_in_jail a owl:Class ;
+    :group "<= 20_days", ">20_days" .
+:ethnicity a owl:Class ;
+    :group "Asian", "Hispanic", "White", "Black", "Other" .
+:gender a owl:Class ;
+    :group "Male", "Female", "_Other" .

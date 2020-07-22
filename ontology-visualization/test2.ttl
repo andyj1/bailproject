@@ -1,0 +1,16 @@
+@prefix : <http://dig.isi.edu/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+:Country a owl:Class .
+:State owl:subClassOf :Country .
+:has_crimes a owl:ObjectProperty .
+:has_state a owl:ObjectProperty .
+:have_data a owl:ObjectProperty .
+:categorize a owl:ObjectProperty .
+:link a owl:ObjectProperty .
+:has a owl:ObjectProperty .
+
+:group a owl:DatatypeProperty .
